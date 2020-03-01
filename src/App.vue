@@ -65,7 +65,7 @@
 </div>
 
 <!-- content -->
-<div>
+<div class="w-full">
 
 
 <div class="">
@@ -76,7 +76,8 @@
       </h2>
     </div>
   </div>
-  <div class="mt-8 w-screen sm:w-full">
+  
+  <div class="mt-8">
     <div class="mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mx-auto">
         <div class="rounded-lg bg-gray-800 shadow-lg sm:grid sm:grid-cols-2">
@@ -84,10 +85,10 @@
             <p class="text-lg leading-6 font-medium text-gray-300">
               <span class="sketch-underline">Race</span>
             </p>
-            <p class="mt-2 text-5xl leading-none font-extrabold text-white">
+            <p class="mt-2 md:text-4xl text-3xl leading-none font-semibold text-white">
               Sun 1 Mar
             </p>
-            <p class="mb-3 text-5xl leading-none font-extrabold text-white">
+            <p class="mb-3 md:text-5xl text-4xl leading-none font-semibold text-white">
               2:10 PM
             </p>
             <p class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium leading-4 bg-yellow-200 text-gray-800">
@@ -98,10 +99,10 @@
             <p class="text-lg leading-6 font-medium text-gray-300">
               <span class="sketch-underline">Qualification</span>
             </p>
-            <p class="mt-2 text-5xl leading-none font-extrabold text-white">
+            <p class="mt-2 md:text-4xl text-3xl leading-none font-semibold text-white">
               Sat 29 Feb
             </p>
-            <p class="mb-3 text-5xl leading-none font-extrabold text-white">
+            <p class="mb-3 md:text-5xl text-4xl leading-none font-semibold text-white">
               1:10 PM
             </p>
             
@@ -111,16 +112,26 @@
     </div>
   </div>
 
-  <div class="mt-8 w-screen sm:w-full">
-    <div class="mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="relative z-0 inline-flex shadow-sm">
-        <button type="button" class="relative inline-flex items-center px-4 py-2 rounded-l-md border border-gray-300 bg-white text-xs sm:text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" title="Your timezone">
+  <div class="mt-8 md:flex justify-between">
+    <div class="px-4 sm:px-6 lg:px-8">
+      <span class="relative z-0 inline-flex shadow-sm mt-1">
+        <button type="button" class="relative inline-flex items-center px-4 py-1.5 rounded-l-md border border-gray-300 bg-white text-xs leading-4 text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" title="Your timezone">
           Pacific/Auckland
         </button>
-        <button type="button" class="-ml-px relative inline-flex items-center px-4 py-2 rounded-r-md border border-gray-300 bg-white text-xs sm:text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" title="Race timezone">
+        <button type="button" class="-ml-px relative inline-flex items-center px-4 py-1.5 rounded-r-md border border-gray-300 bg-white text-xs leading-4 text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" title="Race timezone">
           Europe/Hungary
         </button>
       </span>
+    </div>
+
+    <div class="px-4 sm:px-6 lg:px-8 w-full sm:w-1/2">
+      <div class="mt-1 rounded-md shadow-sm">
+        <select class="form-select block w-full transition duration-150 ease-in-out text-xs leading-4 py-1.5">
+          <option disabled selected value="">Save Timezone</option>
+          <option>Canada</option>
+          <option>Mexico</option>
+        </select>
+      </div>
     </div>
   </div>
 </div>
