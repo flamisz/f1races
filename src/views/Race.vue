@@ -36,7 +36,6 @@
             <p class="mb-3 md:text-5xl text-4xl leading-none font-semibold text-white">
               1:10 PM
             </p>
-            
           </div>
         </div>
       </div>
@@ -57,10 +56,11 @@
 
     <div class="px-4 sm:px-6 lg:px-8 w-full sm:w-1/2">
       <div class="mt-1 rounded-md shadow-sm">
-        <select class="form-select block w-full transition duration-150 ease-in-out text-xs leading-4 py-1.5">
+        <select v-model="selected" class="form-select block w-full transition duration-150 ease-in-out text-xs leading-4 py-1.5">
           <option disabled selected value="">Save Timezone</option>
-          <option>Canada</option>
-          <option>Mexico</option>
+          <option v-for="(option, index) in timezones" :value="option" :key="index">
+            {{ option }}
+          </option>
         </select>
       </div>
     </div>

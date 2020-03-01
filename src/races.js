@@ -8,7 +8,8 @@ const races = {
         race: "2019-03-17T04:10:00Z"
     },
     tz: "Australia/Melbourne",
-    circuit_id: "albert_park"
+    circuit_id: "albert_park",
+    name: "australia"
   },
 
   'bahrain': {
@@ -20,7 +21,8 @@ const races = {
         race: "2019-03-31T15:10:00Z"
     },
     tz: "Asia/Bahrain",
-    circuit_id: "bahrain"
+    circuit_id: "bahrain",
+    name: "bahrain"
   },
 
   'china': {
@@ -32,7 +34,8 @@ const races = {
         race: "2019-04-14T06:10:00Z"
     },
     tz: "Asia/Shanghai",
-    circuit_id: "shanghai"
+    circuit_id: "shanghai",
+    name: "china"
   },
 
   'azerbaijan': {
@@ -44,7 +47,8 @@ const races = {
         race: "2019-04-28T12:10:00Z"
     },
     tz: "Asia/Baku",
-    circuit_id: "BAK"
+    circuit_id: "BAK",
+    name: "azerbaijan"
   },
 
   'spain': {
@@ -56,7 +60,8 @@ const races = {
         race: "2019-05-12T13:10:00Z"
     },
     tz: "Europe/Madrid",
-    circuit_id: "catalunya"
+    circuit_id: "catalunya",
+    name: "spain"
   },
 
   'monaco': {
@@ -68,7 +73,8 @@ const races = {
         race: "2019-05-26T13:10:00Z"
     },
     tz: "Europe/Monaco",
-    circuit_id: "monaco"
+    circuit_id: "monaco",
+    name: "monaco"
   },
 
   'canada': {
@@ -80,7 +86,8 @@ const races = {
         race: "2019-06-09T18:10:00Z"
     },
     tz: "America/Montreal",
-    circuit_id: "villeneuve"
+    circuit_id: "villeneuve",
+    name: "canada"
   },
 
   'france': {
@@ -92,7 +99,8 @@ const races = {
         race: "2019-06-23T13:10:00Z"
     },
     tz: "Europe/Paris",
-    circuit_id: "ricard"
+    circuit_id: "ricard",
+    name: "france"
   },
 
   'austria': {
@@ -104,7 +112,8 @@ const races = {
         race: "2019-06-30T13:10:00Z"
     },
     tz: "Europe/Vienna",
-    circuit_id: "red_bull_ring"
+    circuit_id: "red_bull_ring",
+    name: "austria"
   },
 
   'great-britain': {
@@ -116,7 +125,8 @@ const races = {
         race: "2019-07-14T13:10:00Z"
     },
     tz: "Europe/London",
-    circuit_id: "silverstone"
+    circuit_id: "silverstone",
+    name: "great-britain"
   },
 
   'germany': {
@@ -128,7 +138,8 @@ const races = {
         race: "2019-07-28T13:10:00Z"
     },
     tz: "Europe/Berlin",
-    circuit_id: "hockenheimring"
+    circuit_id: "hockenheimring",
+    name: "germany"
   },
 
   'hungary': {
@@ -140,7 +151,8 @@ const races = {
         race: "2019-08-04T13:10:00Z"
     },
     tz: "Europe/Budapest",
-    circuit_id: "hungaroring"
+    circuit_id: "hungaroring",
+    name: "hungary"
   },
 
   'belgium': {
@@ -152,7 +164,8 @@ const races = {
         race: "2019-09-01T13:10:00Z"
     },
     tz: "Europe/Brussels",
-    circuit_id: "spa"
+    circuit_id: "spa",
+    name: "belgium"
   },
 
   'italy': {
@@ -164,7 +177,8 @@ const races = {
         race: "2019-09-08T13:10:00Z"
     },
     tz: "Europe/Rome",
-    circuit_id: "monza"
+    circuit_id: "monza",
+    name: "italy"
   },
 
   'singapore': {
@@ -176,7 +190,8 @@ const races = {
         race: "2019-09-22T12:10:00Z"
     },
     tz: "Asia/Singapore",
-    circuit_id: "marina_bay"
+    circuit_id: "marina_bay",
+    name: "singapore"
   },
 
   'russia': {
@@ -188,7 +203,8 @@ const races = {
         race: "2019-09-29T11:10:00Z"
     },
     tz: "Europe/Moscow",
-    circuit_id: "sochi"
+    circuit_id: "sochi",
+    name: "russia"
   },
 
   'japan': {
@@ -200,7 +216,8 @@ const races = {
         race: "2019-10-13T05:10:00Z"
     },
     tz: "Asia/Tokyo",
-    circuit_id: "suzuka"
+    circuit_id: "suzuka",
+    name: "japan"
   },
 
   'mexico': {
@@ -212,7 +229,8 @@ const races = {
         race: "2019-10-27T18:10:00Z"
     },
     tz: "America/Mexico_City",
-    circuit_id: "rodriguez"
+    circuit_id: "rodriguez",
+    name: "mexico"
   },
 
   'united-states': {
@@ -224,7 +242,8 @@ const races = {
         race: "2019-11-03T19:10:00Z"
     },
     tz: "America/Chicago",
-    circuit_id: "americas"
+    circuit_id: "americas",
+    name: "united-states"
   },
 
   'brazil': {
@@ -236,7 +255,8 @@ const races = {
         race: "2019-11-17T17:10:00Z"
     },
     tz: "America/Sao_Paulo",
-    circuit_id: "interlagos"
+    circuit_id: "interlagos",
+    name: "brazil"
   },
 
   'abu-dhabi': {
@@ -248,7 +268,8 @@ const races = {
         race: "2019-12-01T12:10:00Z"
     },
     tz: "Asia/Dubai",
-    circuit_id: "yas_marina"
+    circuit_id: "yas_marina",
+    name: "abu-dhabi"
   }
 }
 
