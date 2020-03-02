@@ -51,8 +51,8 @@
       class="mt-1 group flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-200 transition ease-in-out duration-150">
         <Track :path="race.svg_path" />
         <span class="truncate capitalize">{{ race.name }}</span>
-        <span class="ml-auto text-xs">
-          14-17 Mar
+        <span class="ml-auto text-xs tracking-tighter">
+          {{ raceDate(race) }}
         </span>
       </router-link>
     </nav>
@@ -72,6 +72,7 @@
 <script>
 import { getRaces } from '@/races'
 import Track from './Track'
+import moment from 'moment-timezone'
 
 export default {
   name: 'Nav',
@@ -97,10 +98,28 @@ export default {
     console.log('created')
   },
 
+  // computed: {
+  //   raceDate: function (race) {
+  //     if (moment(race.times.from).month() == moment(race.times.to).month()) {
+  //       return `moment(race.times.from).format('DD')-moment(race.times.to).format('DD') moment(race.times.from).format('MMM')`
+  //     } else {
+  //       return `moment(race.times.from).format('DD') moment(race.times.from).format('MMM')-moment(race.times.to).format('DD') moment(race.times.to).format('MMM')`
+  //     }
+  //   }
+  // },
+
   methods: {
     fetchData () {
       this.races = getRaces()
     },
+
+    raceDate: function (race) {
+      if (moment(race.times.from).month() == moment(race.times.to).month()) {
+        return moment(race.times.from).format('DD') + '-' + moment(race.times.to).format('DD') + ' ' + moment(race.times.from).format('MMM')
+      } else {
+        return moment(race.times.from).format('DD') + ' ' + moment(race.times.from).format('MMM') + '-' + moment(race.times.to).format('DD') + ' ' + moment(race.times.from).format('MMM')
+      }
+    }
   }
 }
 </script>
