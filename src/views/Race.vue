@@ -2,8 +2,8 @@
 <div class="">
   <div class="mx-auto px-4 sm:px-6 lg:px-8">
     <div class="sm:max-w-4xl mx-auto">
-      <h2 class="text-3xl leading-9 font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
-        <span class="highlight">Name of the Race</span>
+      <h2 class="text-2xl leading-9 font-extrabold text-gray-900 sm:text-3xl sm:leading-10 text-center">
+        <span class="highlight">{{ race.title }}</span>
       </h2>
     </div>
   </div>
@@ -23,7 +23,7 @@
               2:10 PM
             </p>
             <p class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium leading-4 bg-yellow-200 text-gray-800">
-              Pacific/Auckland
+              {{ tz }}
             </p>
           </div>
           <div class="border-t border-b border-gray-100 p-6 sm:border-0 sm:border-l">
@@ -46,10 +46,10 @@
     <div class="px-4 sm:px-6 lg:px-8">
       <span class="relative z-0 inline-flex shadow-sm mt-1">
         <button type="button" class="relative inline-flex items-center px-4 py-1.5 rounded-l-md border border-gray-300 bg-white text-xs leading-4 text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" title="Your timezone">
-          Pacific/Auckland
+          {{ localTz }}
         </button>
         <button type="button" class="-ml-px relative inline-flex items-center px-4 py-1.5 rounded-r-md border border-gray-300 bg-white text-xs leading-4 text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" title="Race timezone">
-          Europe/Hungary
+          {{ race.tz }}
         </button>
       </span>
     </div>
