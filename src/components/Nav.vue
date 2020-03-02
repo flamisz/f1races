@@ -98,16 +98,6 @@ export default {
     console.log('created')
   },
 
-  // computed: {
-  //   raceDate: function (race) {
-  //     if (moment(race.times.from).month() == moment(race.times.to).month()) {
-  //       return `moment(race.times.from).format('DD')-moment(race.times.to).format('DD') moment(race.times.from).format('MMM')`
-  //     } else {
-  //       return `moment(race.times.from).format('DD') moment(race.times.from).format('MMM')-moment(race.times.to).format('DD') moment(race.times.to).format('MMM')`
-  //     }
-  //   }
-  // },
-
   methods: {
     fetchData () {
       this.races = getRaces()

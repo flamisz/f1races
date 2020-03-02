@@ -26,7 +26,7 @@
               {{ tz }}
             </p>
           </div>
-          <div class="border-t border-b border-gray-100 p-6 sm:border-0 sm:border-l">
+          <div class="border-t border-gray-100 p-6 sm:border-0 sm:border-l">
             <p class="text-lg leading-6 font-medium text-gray-300">
               <span class="sketch-underline">Qualifying</span>
             </p>
@@ -45,16 +45,16 @@
   <div class="mt-8 md:flex justify-between">
     <div class="px-4 sm:px-6 lg:px-8">
       <span class="relative z-0 inline-flex shadow-sm mt-1">
-        <button type="button" class="relative inline-flex items-center px-4 py-1.5 rounded-l-md border border-gray-300 bg-white text-xs leading-4 text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" title="Your timezone">
+        <button type="button" @click.prevent="tz = localTz" class="relative inline-flex items-center px-4 py-1.5 rounded-l-md border border-gray-300 bg-white text-xs leading-4 text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" title="Your timezone">
           {{ localTz }}
         </button>
-        <button type="button" class="-ml-px relative inline-flex items-center px-4 py-1.5 rounded-r-md border border-gray-300 bg-white text-xs leading-4 text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" title="Race timezone">
+        <button type="button" @click.prevent="tz = race.tz" class="-ml-px relative inline-flex items-center px-4 py-1.5 rounded-r-md border border-gray-300 bg-white text-xs leading-4 text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" title="Race timezone">
           {{ race.tz }}
         </button>
       </span>
     </div>
 
-    <div class="px-4 sm:px-6 lg:px-8 w-full sm:w-1/2">
+    <div class="px-4 sm:px-6 lg:px-8 w-full sm:w-1/2 flex">
       <div class="mt-1 rounded-md shadow-sm">
         <select v-model="selected" class="form-select block w-full transition duration-150 ease-in-out text-xs leading-4 py-1.5">
           <option disabled selected value="">Save Timezone</option>
@@ -63,6 +63,11 @@
           </option>
         </select>
       </div>
+      <span class="inline-flex rounded-md shadow-sm mt-1 ml-1">
+        <button type="button" @click.prevent="clear" v-if="selected" class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 text-xs leading-4 font-medium rounded text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150">
+          Reset
+        </button>
+      </span>
     </div>
   </div>
 
