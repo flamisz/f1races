@@ -55,7 +55,7 @@
     </div>
 
     <div class="px-4 sm:px-6 lg:px-8 w-full sm:w-1/2 flex">
-      <div class="mt-1 rounded-md shadow-sm">
+      <div class="mt-1 rounded-md shadow-sm flex-1">
         <select v-model="selected" class="form-select block w-full transition duration-150 ease-in-out text-xs leading-4 py-1.5">
           <option disabled selected value="">Save Timezone</option>
           <option v-for="(option, index) in timezones" :value="option" :key="index">
@@ -63,6 +63,7 @@
           </option>
         </select>
       </div>
+
       <span class="inline-flex rounded-md shadow-sm mt-1 ml-1">
         <button type="button" @click.prevent="clear" v-if="selected" class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 text-xs leading-4 font-medium rounded text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150">
           Reset
