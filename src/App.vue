@@ -3,7 +3,7 @@
   <Nav/>
   
   <!-- content -->
-  <div class="w-full">
+  <div class="w-full md:pt-8">
     <router-view/>
   </div>
 </div>
