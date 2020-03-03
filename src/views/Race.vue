@@ -2,7 +2,7 @@
 <div class="">
   <div class="mx-auto px-4 sm:px-6 lg:px-8">
     <div class="sm:max-w-4xl mx-auto">
-      <h2 class="text-2xl leading-9 font-extrabold text-gray-900 sm:text-3xl sm:leading-10 text-center">
+      <h2 class="text-2xl leading-9 font-semibold text-gray-900 sm:text-3xl sm:leading-10 text-center">
         <span class="highlight">{{ race.title }}</span>
       </h2>
     </div>
@@ -17,12 +17,12 @@
               <span class="sketch-underline">Race</span>
             </p>
             <p class="mt-2 md:text-4xl text-3xl leading-none font-semibold text-white">
-              Sun 1 Mar
+              {{ raceTime.date }}
             </p>
             <p class="mb-3 md:text-5xl text-4xl leading-none font-semibold text-white">
-              2:10 PM
+              {{ raceTime.time }}
             </p>
-            <p class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium leading-4 bg-yellow-200 text-gray-800">
+            <p class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium leading-4 bg-yellow-200 text-gray-800" title="Timezone">
               {{ tz }}
             </p>
           </div>
@@ -31,10 +31,10 @@
               <span class="sketch-underline">Qualifying</span>
             </p>
             <p class="mt-2 md:text-4xl text-3xl leading-none font-semibold text-white">
-              Sat 29 Feb
+              {{ qualificationTime.date }}
             </p>
             <p class="mb-3 md:text-5xl text-4xl leading-none font-semibold text-white">
-              1:10 PM
+              {{ qualificationTime.time }}
             </p>
           </div>
         </div>
