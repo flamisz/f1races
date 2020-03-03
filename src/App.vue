@@ -21,6 +21,7 @@ export default {
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,500,600&display=swap');
+
 @import "tailwindcss/base";
 
 @import "tailwindcss/components";
@@ -33,6 +34,33 @@ export default {
 }
 
 @import "tailwindcss/utilities";
+
+@-webkit-keyframes spin {
+ 0% {
+  -webkit-transform:rotate(0deg);
+  transform:rotate(0deg)
+ }
+ to {
+  -webkit-transform:rotate(1turn);
+  transform:rotate(1turn)
+ }
+}
+
+@keyframes spin {
+ 0% {
+  -webkit-transform:rotate(0deg);
+  transform:rotate(0deg)
+ }
+ to {
+  -webkit-transform:rotate(1turn);
+  transform:rotate(1turn)
+ }
+}
+
+.spin {
+ -webkit-animation:spin 2s linear infinite;
+ animation:spin 2s linear infinite
+}
 
 .highlight {
   border-radius: 1em 0 1em 0;
