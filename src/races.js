@@ -1,11 +1,11 @@
 const races = {
   'australia': {
-    title: 'Formula 1 Rolex Australian Grand Prix 2019',
+    title: 'Formula 1 Rolex Australian Grand Prix 2020',
     times: {
-        from: "2019-03-14",
-        to: "2019-03-17",
-        qualification: "2019-03-16T05:00:00Z",
-        race: "2019-03-17T04:10:00Z"
+        from: "2020-03-13",
+        to: "2020-03-15",
+        qualification: "2020-03-14T06:00:00Z",
+        race: "2020-03-15T05:10:00Z"
     },
     tz: "Australia/Melbourne",
     circuit_id: "albert_park",
@@ -14,12 +14,12 @@ const races = {
   },
 
   'bahrain': {
-    title: 'Formula 1 Gulf Air Bahrain Grand Prix 2019',
+    title: 'Formula 1 Gulf Air Bahrain Grand Prix 2020',
     times: {
-        from: "2019-03-29",
-        to: "2019-03-31",
-        qualification: "2019-03-30T14:00:00Z",
-        race: "2019-03-31T15:10:00Z"
+        from: "2020-03-20",
+        to: "2020-03-22",
+        qualification: "2020-03-21T15:00:00Z",
+        race: "2020-03-22T15:10:00Z"
     },
     tz: "Asia/Bahrain",
     circuit_id: "bahrain",
@@ -27,41 +27,58 @@ const races = {
     svg_path: "M3.5 12L4.5 5L7.5 7.5L8 8V9.5L10.5 11L10 11.5L6 11L5.5 12L14 12.5L14.5 11.5L14 10.5L12 9.5L11.5 8.5L12.5 6H13L18 14L17 14.5H3L4 13.5L3.5 12Z"
   },
 
-  'china': {
-    title: 'Formula 1 Heineken Chinese Grand Prix 2019',
+  'vietnam': {
+    title: 'Formula 1 VinFast Vietnam Grand Prix 2020',
     times: {
-        from: "2019-04-12",
-        to: "2019-04-14",
-        qualification: "2019-04-13T06:00:00Z",
-        race: "2019-04-14T06:10:00Z"
+        from: "2020-04-03",
+        to: "2020-04-05",
+        qualification: "2020-04-04T07:00:00Z",
+        race: "2020-04-05T06:10:00Z"
+    },
+    tz: "Asia/Ho_Chi_Minh",
+    circuit_id: "hanoi",
+    name: "vietnam",
+    svg_path: "M3.5 12L4.5 5L7.5 7.5L8 8V9.5L10.5 11L10 11.5L6 11L5.5 12L14 12.5L14.5 11.5L14 10.5L12 9.5L11.5 8.5L12.5 6H13L18 14L17 14.5H3L4 13.5L3.5 12Z"
+  },
+
+  'china': {
+    title: 'Formula 1 Heineken Chinese Grand Prix 2020',
+    times: {
+        from: "2020-04-17",
+        to: "2020-04-19",
+        qualification: "2020-04-18T06:00:00Z",
+        race: "2020-04-19T06:10:00Z"
     },
     tz: "Asia/Shanghai",
     circuit_id: "shanghai",
     name: "china",
+    extra: {
+      postponed: true
+    },
     svg_path: "M9.5 4.5L6 14L1.5 14.5L1 15.5H17.5L18.5 15L19 14L18 12.5L17 13V14H11L10.5 12L11.6875 12.5L13 12V11L12 9L12.5 7.5H17.5L18 6.5L14.5 5.5L11 6.25L10 5.5V5H10.5L11.5 5.5L11.6875 5V4.5L11 4H10L9.5 4.5Z"
   },
 
-  'azerbaijan': {
-    title: 'Formula 1 Azerbaijan Grand Prix 2019',
+  'netherlands': {
+    title: 'Formula 1 Heineken Dutch Grand Prix 2020',
     times: {
-        from: "2019-04-26",
-        to: "2019-04-29",
-        qualification: "2019-04-27T13:00:00Z",
-        race: "2019-04-28T12:10:00Z"
+        from: "2020-05-01",
+        to: "2020-05-03",
+        qualification: "2020-05-02T13:00:00Z",
+        race: "2020-05-03T13:10:00Z"
     },
-    tz: "Asia/Baku",
-    circuit_id: "BAK",
-    name: "azerbaijan",
-    svg_path: "M10 9.5L6.5 11.5L4 15L1 13.5V12L2 10.5L4.5 9L6 9.5L6.5 10.5L9 9L13.5 7L13 5.5L18 4L19 6.5L10 9.5Z"
+    tz: "Europe/Amsterdam",
+    circuit_id: "zandvoort",
+    name: "netherlands",
+    svg_path: "M9.5 4.5L6 14L1.5 14.5L1 15.5H17.5L18.5 15L19 14L18 12.5L17 13V14H11L10.5 12L11.6875 12.5L13 12V11L12 9L12.5 7.5H17.5L18 6.5L14.5 5.5L11 6.25L10 5.5V5H10.5L11.5 5.5L11.6875 5V4.5L11 4H10L9.5 4.5Z"
   },
 
   'spain': {
-    title: 'Formula 1 Emirates Gran Premio De España 2019',
+    title: 'Formula 1 Gran Premio De España 2020',
     times: {
-        from: "2019-05-10",
-        to: "2019-05-12",
-        qualification: "2019-05-11T13:00:00Z",
-        race: "2019-05-12T13:10:00Z"
+        from: "2020-05-08",
+        to: "2020-05-11",
+        qualification: "2020-05-10T13:00:00Z",
+        race: "2020-05-11T13:10:00Z"
     },
     tz: "Europe/Madrid",
     circuit_id: "catalunya",
@@ -70,12 +87,12 @@ const races = {
   },
 
   'monaco': {
-    title: 'Formula 1 Grand Prix De Monaco 2019',
+    title: 'Formula 1 Grand Prix De Monaco 2020',
     times: {
-        from: "2019-05-23",
-        to: "2019-05-26",
-        qualification: "2019-05-25T13:00:00Z",
-        race: "2019-05-26T13:10:00Z"
+        from: "2020-05-21",
+        to: "2020-05-24",
+        qualification: "2020-05-23T13:00:00Z",
+        race: "2020-05-24T13:10:00Z"
     },
     tz: "Europe/Monaco",
     circuit_id: "monaco",
@@ -83,13 +100,27 @@ const races = {
     svg_path: "M1 12V14V15.5L2.5 16V15.5L2 14V12.5H3L3.5 10L3 9.5L4 8.5L5 7.5L9 9.5L9.5 9L10.5 9.5L13.5 10L15 9.5L16.5 9L19 6L18.5 5.5L18 5L17.5 6L17 5V4L13.5 6V6.5L14 7.5L13.5 8.5H11.5L9 8L4.5 6.5L4 7L2 9.5L1 12Z"
   },
 
-  'canada': {
-    title: 'Formula 1 Grand Prix De Monaco 2019',
+  'azerbaijan': {
+    title: 'Formula 1 Azerbaijan Grand Prix 2020',
     times: {
-        from: "2019-06-07",
-        to: "2019-06-09",
-        qualification: "2019-06-08T18:00:00Z",
-        race: "2019-06-09T18:10:00Z"
+        from: "2020-06-05",
+        to: "2020-06-07",
+        qualification: "2020-06-06T13:00:00Z",
+        race: "2020-06-07T12:10:00Z"
+    },
+    tz: "Asia/Baku",
+    circuit_id: "BAK",
+    name: "azerbaijan",
+    svg_path: "M10 9.5L6.5 11.5L4 15L1 13.5V12L2 10.5L4.5 9L6 9.5L6.5 10.5L9 9L13.5 7L13 5.5L18 4L19 6.5L10 9.5Z"
+  },
+
+  'canada': {
+    title: 'Formula 1 Grand Prix Du Canada 2020',
+    times: {
+        from: "2020-06-12",
+        to: "2020-06-14",
+        qualification: "2020-06-13T18:00:00Z",
+        race: "2020-06-14T18:10:00Z"
     },
     tz: "America/Montreal",
     circuit_id: "villeneuve",
@@ -98,12 +129,12 @@ const races = {
   },
 
   'france': {
-    title: 'Formula 1 Grand Prix De France 2019',
+    title: 'Formula 1 Grand Prix De France 2020',
     times: {
-        from: "2019-06-21",
-        to: "2019-06-23",
-        qualification: "2019-06-22T13:00:00Z",
-        race: "2019-06-23T13:10:00Z"
+        from: "2020-06-26",
+        to: "2020-06-28",
+        qualification: "2020-06-27T13:00:00Z",
+        race: "2020-06-28T13:10:00Z"
     },
     tz: "Europe/Paris",
     circuit_id: "ricard",
@@ -112,12 +143,12 @@ const races = {
   },
 
   'austria': {
-    title: 'Formula 1 Myworld Grosser Preis Von Österreich 2019',
+    title: 'Formula 1 myWorld Grosser Preis Von Österreich 2020',
     times: {
-        from: "2019-06-28",
-        to: "2019-06-30",
-        qualification: "2019-06-29T13:00:00Z",
-        race: "2019-06-30T13:10:00Z"
+        from: "2019-07-03",
+        to: "2019-07-05",
+        qualification: "2019-07-04T13:00:00Z",
+        race: "2019-07-05T13:10:00Z"
     },
     tz: "Europe/Vienna",
     circuit_id: "red_bull_ring",
