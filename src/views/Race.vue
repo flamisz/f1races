@@ -63,9 +63,17 @@
           <button type="button" @click.prevent="tz = localTz" class="relative inline-flex items-center px-4 py-1.5 rounded-l-md border border-gray-300 bg-white text-xs leading-4 text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" title="Your timezone">
             {{ localTz }}
           </button>
+          <div class="absolute left-0" style="top:-25px;">
+            <span class="text-xs highlight">Your timezone</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="-mt-1 w-5 h-5 text-gray-300 fill-current transform" style="--transform-rotate: 220deg;"><path d="M15 17v-2.99A4 4 0 0 0 11 10H8v5L2 9l6-6v5h3a6 6 0 0 1 6 6v3h-2z"/></svg>
+          </div>
           <button type="button" @click.prevent="tz = race.tz" class="-ml-px relative inline-flex items-center px-4 py-1.5 rounded-r-md border border-gray-300 bg-white text-xs leading-4 text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" title="Race timezone">
             {{ race.tz }}
           </button>
+          <div class="absolute right-0 " style="top:-25px;">
+            <span class="text-xs highlight">Race timezone</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="absolute right-0 -mt-1 w-5 h-5 text-gray-300 fill-current transform" style="--transform-rotate:135deg;--transform-scale-x:-1;"><path d="M15 17v-2.99A4 4 0 0 0 11 10H8v5L2 9l6-6v5h3a6 6 0 0 1 6 6v3h-2z"/></svg>
+          </div>
         </span>
       </div>
 
