@@ -262,7 +262,7 @@ const races = {
     times: {
         from: "2020-10-23",
         to: "2020-10-25",
-        qualification: "2020-10-23T21:00:00Z",
+        qualification: "2020-10-24T21:00:00Z",
         race: "2020-10-25T19:10:00Z"
     },
     tz: "America/Chicago",
@@ -276,7 +276,7 @@ const races = {
     times: {
         from: "2020-10-30",
         to: "2020-11-01",
-        qualification: "2020-10-30T19:00:00Z",
+        qualification: "2020-10-31T19:00:00Z",
         race: "2020-11-01T19:10:00Z"
     },
     tz: "America/Mexico_City",
