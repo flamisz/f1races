@@ -246,10 +246,10 @@ const races = {
   'japan': {
     title: 'Formula 1 Pirelli Japanese Grand Prix 2020',
     times: {
-        from: "2019-10-09",
-        to: "2019-10-11",
-        qualification: "2019-10-10T07:00:00Z",
-        race: "2019-10-11T05:10:00Z"
+        from: "2020-10-09",
+        to: "2020-10-11",
+        qualification: "2020-10-10T07:00:00Z",
+        race: "2020-10-11T05:10:00Z"
     },
     tz: "Asia/Tokyo",
     circuit_id: "suzuka",
@@ -257,27 +257,13 @@ const races = {
     svg_path: "M10 15H2L1 13.5L2 13L3.5 13.5L5 12.5L6 13L7.5 12.5L9 13.5L10 12.5V9L11 8.5L14 10V10.5L14.5 7L18.5 5L19.5 5.5L19 7.5H13.5L11 10V13L10 15Z"
   },
 
-  'mexico': {
-    title: 'Formula 1 Gran Premio De México 2019',
-    times: {
-        from: "2019-10-25",
-        to: "2019-10-27",
-        qualification: "2019-10-26T18:00:00Z",
-        race: "2019-10-27T18:10:00Z"
-    },
-    tz: "America/Mexico_City",
-    circuit_id: "rodriguez",
-    name: "mexico",
-    svg_path: "M16 4L1 10V12.5L3 11.5L3.5 13L8 11H10.5L11.5 11.5L13.5 11L14.5 12H15.5L17.5 15.7037L18.5 14L17.5 13.5V5.5L16.5 5L16 4Z"
-  },
-
   'united-states': {
-    title: 'Formula 1 United States Grand Prix 2019',
+    title: 'Formula 1 United States Grand Prix 2020',
     times: {
-        from: "2019-11-01",
-        to: "2019-11-03",
-        qualification: "2019-11-02T21:00:00Z",
-        race: "2019-11-03T19:10:00Z"
+        from: "2020-10-23",
+        to: "2020-10-25",
+        qualification: "2020-10-23T21:00:00Z",
+        race: "2020-10-25T19:10:00Z"
     },
     tz: "America/Chicago",
     circuit_id: "americas",
@@ -285,13 +271,27 @@ const races = {
     svg_path: "M18 4L7.5 8L8.5 9.5L8 10L7 8.5L6 9L7.5 11V11.5L5.5 12L3.5 10.5L1 12L8.5 16.5L7.5 13.5L9.5 11.5V10.5H10.5L11 8.5H13L14 7.5L15.5 8.5L17 7.5L18 4Z"
   },
 
-  'brazil': {
-    title: 'Formula 1 Heineken Grande Prêmio Do Brasil 2019',
+  'mexico': {
+    title: 'Formula 1 Gran Premio De La Ciudad De México 2020',
     times: {
-        from: "2019-11-15",
-        to: "2019-11-17",
-        qualification: "2019-11-16T17:00:00Z",
-        race: "2019-11-17T17:10:00Z"
+        from: "2020-10-30",
+        to: "2020-11-01",
+        qualification: "2020-10-30T19:00:00Z",
+        race: "2020-11-01T19:10:00Z"
+    },
+    tz: "America/Mexico_City",
+    circuit_id: "rodriguez",
+    name: "mexico",
+    svg_path: "M16 4L1 10V12.5L3 11.5L3.5 13L8 11H10.5L11.5 11.5L13.5 11L14.5 12H15.5L17.5 15.7037L18.5 14L17.5 13.5V5.5L16.5 5L16 4Z"
+  },
+
+  'brazil': {
+    title: 'Formula 1 Heineken Grande Prêmio Do Brasil 2020',
+    times: {
+        from: "2020-11-13",
+        to: "2020-11-15",
+        qualification: "2020-11-14T18:00:00Z",
+        race: "2020-11-15T17:10:00Z"
     },
     tz: "America/Sao_Paulo",
     circuit_id: "interlagos",
@@ -302,10 +302,10 @@ const races = {
   'abu-dhabi': {
     title: 'Formula 1 Etihad Airways Abu Dhabi Grand Prix 2019',
     times: {
-        from: "2019-11-29",
-        to: "2019-12-01",
-        qualification: "2019-11-30T12:00:00Z",
-        race: "2019-12-01T12:10:00Z"
+        from: "2019-11-27",
+        to: "2019-11-29",
+        qualification: "2019-11-28T13:00:00Z",
+        race: "2019-11-29T13:10:00Z"
     },
     tz: "Asia/Dubai",
     circuit_id: "yas_marina",
