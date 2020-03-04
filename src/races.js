@@ -145,10 +145,10 @@ const races = {
   'austria': {
     title: 'Formula 1 myWorld Grosser Preis Von Österreich 2020',
     times: {
-        from: "2019-07-03",
-        to: "2019-07-05",
-        qualification: "2019-07-04T13:00:00Z",
-        race: "2019-07-05T13:10:00Z"
+        from: "2020-07-03",
+        to: "2020-07-05",
+        qualification: "2020-07-04T13:00:00Z",
+        race: "2020-07-05T13:10:00Z"
     },
     tz: "Europe/Vienna",
     circuit_id: "red_bull_ring",
@@ -157,12 +157,12 @@ const races = {
   },
 
   'great-britain': {
-    title: 'Formula 1 Rolex British Grand Prix 2019',
+    title: 'Formula 1 Pirelli British Grand Prix 2020',
     times: {
-        from: "2019-07-12",
-        to: "2019-07-14",
-        qualification: "2019-07-13T13:00:00Z",
-        race: "2019-07-14T13:10:00Z"
+        from: "2020-07-17",
+        to: "2020-07-19",
+        qualification: "2020-07-18T13:00:00Z",
+        race: "2020-07-19T13:10:00Z"
     },
     tz: "Europe/London",
     circuit_id: "silverstone",
@@ -170,27 +170,13 @@ const races = {
     svg_path: "M2 4L1 9L3.5 11.5L4.5 10.5L3.5 10L3 9.25L8.5 5.1875H9L10.5 6.5H8.8125L10 8.5L9 11L9.5 12L13.5 16L14.5 15.5V14.5L17 13H18L19 12L12.5 5.5L11.5 4H10.5L8.8125 3L7.5 4L4 3L3 3.5L2 4Z"
   },
 
-  'germany': {
-    title: 'Formula 1 Mercedes-benz Grosser Preis Von Deutschland 2019',
-    times: {
-        from: "2019-07-26",
-        to: "2019-07-28",
-        qualification: "2019-07-27T13:00:00Z",
-        race: "2019-07-28T13:10:00Z"
-    },
-    tz: "Europe/Berlin",
-    circuit_id: "hockenheimring",
-    name: "germany",
-    svg_path: "M2.5 7L1 9L3.5 15L5.5 14L4 12.5L3.5 11L4.5 10.5L7.5 13L11.5 10.5V8.5L14.5 9L18.5 5.5L14 7.5H11L8.5 7L6 5.5L5.5 4H5L2.5 7Z"
-  },
-
   'hungary': {
-    title: 'Formula 1 Rolex Magyar Nagydíj 2019',
+    title: 'Formula 1 Magyar Nagydíj 2020',
     times: {
-        from: "2019-08-02",
-        to: "2019-08-04",
-        qualification: "2019-08-03T13:00:00Z",
-        race: "2019-08-04T13:10:00Z"
+        from: "2020-07-31",
+        to: "2020-08-02",
+        qualification: "2020-08-01T13:00:00Z",
+        race: "2020-08-02T13:10:00Z"
     },
     tz: "Europe/Budapest",
     circuit_id: "hungaroring",
@@ -199,12 +185,12 @@ const races = {
   },
 
   'belgium': {
-    title: 'Formula 1 Johnnie Walker Belgian Grand Prix 2019',
+    title: 'Formula 1 Rolex Belgian Grand Prix 2020',
     times: {
-        from: "2019-08-30",
-        to: "2019-09-01",
-        qualification: "2019-08-31T13:00:00Z",
-        race: "2019-09-01T13:10:00Z"
+        from: "2020-08-28",
+        to: "2020-08-30",
+        qualification: "2020-08-29T13:00:00Z",
+        race: "2020-08-30T13:10:00Z"
     },
     tz: "Europe/Brussels",
     circuit_id: "spa",
@@ -213,12 +199,12 @@ const races = {
   },
 
   'italy': {
-    title: 'Formula 1 Gran Premio Heineken D\'Italia 2019',
+    title: 'Formula 1 Gran Premio Heineken D\'italia 2020',
     times: {
-        from: "2019-09-06",
-        to: "2019-09-08",
-        qualification: "2019-09-07T13:00:00Z",
-        race: "2019-09-08T13:10:00Z"
+        from: "2020-09-04",
+        to: "2020-09-06",
+        qualification: "2020-09-05T13:00:00Z",
+        race: "2020-09-06T13:10:00Z"
     },
     tz: "Europe/Rome",
     circuit_id: "monza",
@@ -227,26 +213,29 @@ const races = {
   },
 
   'singapore': {
-    title: 'Formula 1 Singapore Airlines Singapore Grand Prix 2019',
+    title: 'Formula 1 Singapore Airlines Singapore Grand Prix 2020',
     times: {
-        from: "2019-09-20",
-        to: "2019-09-22",
-        qualification: "2019-09-21T13:00:00Z",
-        race: "2019-09-22T12:10:00Z"
+        from: "2020-09-18",
+        to: "2020-09-20",
+        qualification: "2020-09-19T13:00:00Z",
+        race: "2020-09-20T12:10:00Z"
     },
     tz: "Asia/Singapore",
     circuit_id: "marina_bay",
     name: "singapore",
+    extra: {
+      night: true
+    },
     svg_path: "M18 12L17 13H14V11.5H12.5L12 13L9.5 12L8.5 11L5.5 9.5L3.5 15L2.5 13.5L2 12.5L1 12L4 7L5.5 8.5L7 6.5L10.5 9L16.5 9.5L15 6.5L16 5L16.5 5.5L17.5 6L18 12Z"
   },
 
   'russia': {
-    title: 'Formula 1 Vtb Russian Grand Prix 2019',
+    title: 'Formula 1 VTB Russian Grand Prix 2020',
     times: {
-        from: "2019-09-27",
-        to: "2019-09-29",
-        qualification: "2019-09-28T12:00:00Z",
-        race: "2019-09-29T11:10:00Z"
+        from: "2020-09-25",
+        to: "2020-09-27",
+        qualification: "2020-09-26T12:00:00Z",
+        race: "2020-09-27T11:10:00Z"
     },
     tz: "Europe/Moscow",
     circuit_id: "sochi",
@@ -255,12 +244,12 @@ const races = {
   },
 
   'japan': {
-    title: 'Formula 1 Japanese Grand Prix 2019',
+    title: 'Formula 1 Pirelli Japanese Grand Prix 2020',
     times: {
-        from: "2019-10-11",
-        to: "2019-10-13",
-        qualification: "2019-10-12T06:00:00Z",
-        race: "2019-10-13T05:10:00Z"
+        from: "2019-10-09",
+        to: "2019-10-11",
+        qualification: "2019-10-10T07:00:00Z",
+        race: "2019-10-11T05:10:00Z"
     },
     tz: "Asia/Tokyo",
     circuit_id: "suzuka",
