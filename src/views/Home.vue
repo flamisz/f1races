@@ -1,9 +1,14 @@
 <template>
-  <div class="p-4 m-4">
-    <h1 class="text-2xl">Formula 1 Races</h1>
+  <div class="mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="sm:max-w-4xl mx-auto">
+      <h2 class="text-2xl leading-9 font-semibold text-gray-900 sm:text-3xl sm:leading-10 text-center">
+        <span class="highlight">Formula 1 Races</span>
+      </h2>
+    </div>
+    
     <div class="bg-white rounded shadow p-4 mt-4">
       <p>Check the times of the races by your local time, track time or any choosen timezone.</p>
-      <p class="mt-2">Default is your localtime but if you choose a timezone, that will be the default until you reset it.</p>
+      <p class="mt-2">Default is your localtime but if you save a timezone, that will be the default until you reset it.</p>
       <p class="mt-2">
         <span class="highlight">
           No bullshit, no ads, no trackers, only what's important.
