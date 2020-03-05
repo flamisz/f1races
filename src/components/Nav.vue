@@ -29,8 +29,9 @@
   <!-- Static sidebar for desktop -->
   <div class="w-64 hidden sm:block">
     <nav>
-      <router-link v-for="race in races" :key="race.name" :to="'/race/' + race.name" 
-      class="mt-1 group flex items-center px-3 py-1 text-sm font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-200 transition ease-in-out duration-150">
+      <!-- <router-link v-for="race in races" :key="race.name" :to="'/race/' + race.name" 
+      class="mt-1 group flex items-center px-3 py-1 text-sm font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-200 transition ease-in-out duration-150"> -->
+      <router-link v-for="race in races" :key="race.name" :to="'/race/' + race.name" class="flex group">
         <Track :path="race.svg_path" />
         <span class="truncate capitalize">{{ race.name }}</span>
         <span class="ml-auto text-xs tracking-tighter">

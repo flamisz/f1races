@@ -1,11 +1,9 @@
 <template>
-<div class="max-w-screen-lg mx-auto sm:flex">
+<div class="w-full max-w-screen-xl mx-auto px-6">
   <Nav/>
   
   <!-- content -->
-  <div class="w-full md:pt-8">
-    <router-view/>
-  </div>
+  <router-view/>
 </div>
 </template>
 
@@ -27,9 +25,9 @@ export default {
 @import "tailwindcss/components";
 
 .router-link-exact-active {
-  @apply bg-gray-200 text-gray-900 #{!important};
+  @apply font-medium text-indigo-500 #{!important};
   & svg {
-    @apply text-gray-500 #{!important};
+    @apply text-indigo-500 #{!important};
   }
 }
 
