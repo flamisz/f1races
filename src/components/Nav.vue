@@ -1,5 +1,5 @@
 <template>
-<div class="h-screen overflow-y-auto">
+<div class="h-screen overflow-y-auto pr-4">
   <!-- Off-canvas menu for mobile -->
   <div class="sm:hidden">
     <div @click="sidebarOpen = false" class="fixed inset-0 z-30 bg-gray-600 transition-opacity ease-linear duration-300" :class="{'opacity-75 pointer-events-auto': sidebarOpen, 'opacity-0 pointer-events-none': !sidebarOpen}"></div>
@@ -31,7 +31,7 @@
     <nav>
       <!-- <router-link v-for="race in races" :key="race.name" :to="'/race/' + race.name" 
       class="mt-1 group flex items-center px-3 py-1 text-sm font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-200 transition ease-in-out duration-150"> -->
-      <router-link v-for="race in races" :key="race.name" :to="'/race/' + race.name" class="flex items-center hover:bg-green-100 text-sm p-2 rounded-lg">
+      <router-link v-for="race in races" :key="race.name" :to="'/race/' + race.name" class="flex items-center text-sm p-2 rounded-lg group">
         <Track :path="race.svg_path" />
         <span class="truncate capitalize">{{ race.name }}</span>
         <span class="ml-auto text-xs tracking-tighter font-mono">

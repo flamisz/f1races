@@ -27,7 +27,7 @@ export default {
 .router-link-exact-active {
   @apply font-medium text-green-500 #{!important};
   & svg {
-    @apply text-green-100 #{!important};
+    @apply text-gray-500 #{!important};
   }
 }
 
