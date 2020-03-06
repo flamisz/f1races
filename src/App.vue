@@ -1,5 +1,5 @@
 <template>
-<div class="w-full max-w-screen-xl mx-auto px-6 flex">
+<div class="w-full max-w-screen-xl mx-auto sm:px-6 sm:flex">
   <Nav/>
   
   <!-- content -->
@@ -25,9 +25,8 @@ export default {
 @import "tailwindcss/components";
 
 .router-link-exact-active {
-  @apply font-medium text-green-500 #{!important};
   & svg {
-    @apply text-gray-500 #{!important};
+    @apply text-white bg-gray-600 #{!important};
   }
 }
 
@@ -53,6 +52,14 @@ export default {
   -webkit-transform:rotate(1turn);
   transform:rotate(1turn)
  }
+}
+
+.text-xxs {
+  font-size: 0.5rem;
+}
+
+.p-xs {
+  padding: 0.15rem;
 }
 
 .spin {
