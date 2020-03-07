@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="mt-4 w-full">
   <div v-if="loading" class="mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="w-4 h-4 spin mr-2 fill-current">
@@ -14,45 +14,45 @@
     {{ error }}
   </div>
 
-  <div v-if="race">
-    <div class="mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="sm:max-w-4xl mx-auto">
-        <h2 class="text-2xl leading-9 font-semibold text-gray-900 sm:text-3xl sm:leading-10 text-center">
-          <span class="highlight">{{ race.title }}</span>
+  <div v-if="race" class="mx-auto sm:px-4 md:px-6 lg:px-8">
+    <div class="bg-white shadow sm:rounded-lg">
+      <div class="border-b border-gray-200 px-4 py-5 sm:px-6">
+        <h2 class="sm:text-2xl text-xl">
+          <span class="highlight ">{{ race.title }}</span>
         </h2>
+        <p class="mt-1">
+          <button v-if="tz !== race.tz" type="button" @click.prevent="tz = race.tz" class="text-sm text-gray-500 border-b-2 border-yellow-400 leading-none hover:text-gray-600" title="Race timezone">
+            {{ race.tz }}
+          </button>
+
+          <button v-if="tz === race.tz" type="button" @click.prevent="tz = localTz" class="text-sm text-gray-500 border-b-2 border-yellow-400 leading-none hover:text-gray-600" title="Your timezone">
+            {{ localTz }}
+          </button>
+        </p>
       </div>
-    </div>
-    
-    <div class="mt-8">
-      <div class="mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto">
-          <div class="rounded-lg bg-gray-800 shadow-lg sm:grid sm:grid-cols-2">
-            <div class="border-b border-gray-100 p-6 sm:border-0 sm:border-r">
-              <p class="text-lg leading-6 font-medium text-gray-300">
-                <span class="sketch-underline">Race</span>
-              </p>
-              <p class="mt-2 md:text-4xl text-3xl leading-none font-semibold text-white">
-                {{ raceTime.date }}
-              </p>
-              <p class="mb-3 md:text-5xl text-4xl leading-none font-semibold text-white">
-                {{ raceTime.time }}
-              </p>
-              <p class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium leading-4 bg-yellow-200 text-gray-800" title="Timezone">
-                {{ tz }}
-              </p>
-            </div>
-            <div class="border-t border-gray-100 p-6 sm:border-0 sm:border-l">
-              <p class="text-lg leading-6 font-medium text-gray-300">
-                <span class="sketch-underline">Qualifying</span>
-              </p>
-              <p class="mt-2 md:text-4xl text-3xl leading-none font-semibold text-white">
-                {{ qualificationTime.date }}
-              </p>
-              <p class="mb-3 md:text-5xl text-4xl leading-none font-semibold text-white">
-                {{ qualificationTime.time }}
-              </p>
-            </div>
-          </div>
+
+      <div class="sm:flex">
+        <div class="sm:w-1/2 border-b sm:border-b-0 px-4 py-5 sm:px-6">
+          <span class="sketch-underline text-base sm:text-lg">Race</span>
+          <p class="mt-2 lg:text-4xl md:text-3xl text-2xl leading-tight font-semibold">
+            {{ raceTime.date }}
+          </p>
+          <p class="lg:text-5xl md:text-4xl text-3xl leading-tight font-semibold">
+            {{ raceTime.time }}
+          </p>
+          <p class="text-gray-500 text-xs sm:text-sm mt-1" title="Timezone">
+            {{ tz }}
+          </p>
+        </div>
+
+        <div class="sm:w-1/2 px-4 py-5 sm:px-6">
+          <span class="sketch-underline text-base sm:text-lg">Qualifying</span>
+          <p class="mt-2 lg:text-4xl md:text-3xl text-2xl leading-tight font-semibold">
+            {{ qualificationTime.date }}
+          </p>
+          <p class="lg:text-5xl md:text-4xl text-3xl leading-tight font-semibold">
+            {{ qualificationTime.time }}
+          </p>
         </div>
       </div>
     </div>
