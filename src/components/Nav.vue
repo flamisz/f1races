@@ -18,7 +18,7 @@
     <nav class="flex flex-wrap px-1 text-gray-600">
       <router-link v-for="race in races" :key="race.name" :to="'/race/' + race.name" class="flex items-center text-sm group w-1/3 pb-2">
         <Track :path="race.svg_path" />
-        <div class="flex flex-col leading-none truncate">
+        <div class="flex flex-col leading-tight truncate">
           <span class="text-md truncate capitalize">{{ race.name }}</span>
           <span class="text-xxs">
             {{ raceDate(race) }}

@@ -1,7 +1,12 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   theme: {
     fontFamily: {
-      mono: ['"IBM Plex Mono"', 'Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
+      sans: [
+          '"Roboto Slab"',
+          ...defaultTheme.fontFamily.sans,
+        ]
     }
   },
   variants: {

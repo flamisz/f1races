@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,500,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,600&display=swap');
 
 @import "tailwindcss/base";
 
@@ -55,7 +55,7 @@ export default {
 }
 
 .text-xxs {
-  font-size: 0.5rem;
+  font-size: 0.65rem;
 }
 
 .p-xs {
