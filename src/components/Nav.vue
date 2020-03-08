@@ -1,7 +1,7 @@
 <template>
 <div>
   <!-- desktop nav -->
-  <div class="pr-4 w-64 flex-shrink-0 sm:block hidden">
+  <div class="pr-4 w-64 flex-shrink-0 sm:block hidden overflow-y-auto h-screen">
     <nav>
       <router-link v-for="race in races" :key="race.name" :to="'/race/' + race.name" class="flex items-center text-sm p-2 group">
         <Track :path="race.svg_path" />

@@ -25,8 +25,11 @@ export default {
 @import "tailwindcss/components";
 
 .router-link-exact-active {
+  & #track {
+    @apply bg-gray-600 #{!important};
+  }
   & svg {
-    @apply text-white bg-gray-600 #{!important};
+    @apply text-white #{!important};
   }
 }
 
