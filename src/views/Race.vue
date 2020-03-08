@@ -57,45 +57,23 @@
       </div>
     </div>
 
-    <div class="mt-8 md:flex justify-between">
-      <div class="px-4 sm:px-6 lg:px-8">
-        <span class="relative z-0 inline-flex shadow-sm mt-1">
-          <button type="button" @click.prevent="tz = localTz" class="relative inline-flex items-center px-4 py-1.5 rounded-l-md border border-gray-300 bg-white text-xs leading-4 text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" title="Your timezone">
-            {{ localTz }}
-          </button>
-          <div class="absolute left-0" style="top:-25px;">
-            <span class="text-xs highlight">Your timezone</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="-mt-1 w-5 h-5 text-gray-300 fill-current transform" style="--transform-rotate: 220deg;"><path d="M15 17v-2.99A4 4 0 0 0 11 10H8v5L2 9l6-6v5h3a6 6 0 0 1 6 6v3h-2z"/></svg>
-          </div>
-          <button type="button" @click.prevent="tz = race.tz" class="-ml-px relative inline-flex items-center px-4 py-1.5 rounded-r-md border border-gray-300 bg-white text-xs leading-4 text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150" title="Race timezone">
-            {{ race.tz }}
-          </button>
-          <div class="absolute right-0 " style="top:-25px;">
-            <span class="text-xs highlight">Race timezone</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="absolute right-0 -mt-1 w-5 h-5 text-gray-300 fill-current transform" style="--transform-rotate:135deg;--transform-scale-x:-1;"><path d="M15 17v-2.99A4 4 0 0 0 11 10H8v5L2 9l6-6v5h3a6 6 0 0 1 6 6v3h-2z"/></svg>
-          </div>
-        </span>
-      </div>
-
-      <div class="px-4 sm:px-6 lg:px-8 w-full sm:w-1/2 flex">
-        <div class="mt-1 rounded-md shadow-sm flex-1">
-          <select v-model="selected" class="form-select block w-full transition duration-150 ease-in-out text-xs leading-4 py-1.5">
-            <option disabled selected value="">Save Timezone</option>
-            <option v-for="(option, index) in timezones" :value="option" :key="index">
-              {{ option }}
-            </option>
-          </select>
+    <div class="mt-3">
+      <div class="sm:max-w-xs sm:rounded-md shadow-sm relative text-gray-700">
+        <select v-model="selected" class="block form-select w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5 py-2 pr-10 sm:rounded-md" :class="{ 'pl-3': !selected, 'pl-10': selected }">
+          <option disabled selected value="">Save Timezone</option>
+          <option v-for="(option, index) in timezones" :value="option" :key="index">
+            {{ option }}
+          </option>
+        </select>
+        <div @click.prevent="clear" v-if="selected" class="absolute inset-y-0 left-0 pl-3 flex items-center cursor-pointer">
+          <svg class="h-5 w-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18ZM8.70711 7.29289C8.31658 6.90237 7.68342 6.90237 7.29289 7.29289C6.90237 7.68342 6.90237 8.31658 7.29289 8.70711L8.58579 10L7.29289 11.2929C6.90237 11.6834 6.90237 12.3166 7.29289 12.7071C7.68342 13.0976 8.31658 13.0976 8.70711 12.7071L10 11.4142L11.2929 12.7071C11.6834 13.0976 12.3166 13.0976 12.7071 12.7071C13.0976 12.3166 13.0976 11.6834 12.7071 11.2929L11.4142 10L12.7071 8.70711C13.0976 8.31658 13.0976 7.68342 12.7071 7.29289C12.3166 6.90237 11.6834 6.90237 11.2929 7.29289L10 8.58579L8.70711 7.29289Z" />
+          </svg>
         </div>
-
-        <span class="inline-flex rounded-md shadow-sm mt-1 ml-1">
-          <button type="button" @click.prevent="clear" v-if="selected" class="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs leading-4 font-medium rounded text-red-800 bg-red-100 hover:bg-red-50 focus:outline-none focus:border-red-300 focus:shadow-outline-red active:bg-red-200 transition ease-in-out duration-150">
-            Reset
-          </button>
-        </span>
-      </div>
+      </div>      
     </div>
 
-    <div class="mt-8 px-4 sm:px-6 lg:px-8">
+    <div class="mt-8 px-4 sm:px-6 lg:px-8 hidden">
       <button type="button" class="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs leading-4 font-medium rounded text-gray-800 bg-yellow-200 hover:bg-yellow-100 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-300 transition ease-in-out duration-150 mr-2">
         Race Result
       </button>
