@@ -1,5 +1,5 @@
 <template>
-<div class="mt-4 w-full">
+<div class="my-4 w-full">
   <div v-if="loading" class="mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="w-4 h-4 spin mr-2 fill-current">

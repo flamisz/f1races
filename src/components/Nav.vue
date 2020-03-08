@@ -14,7 +14,7 @@
   </div>
 
   <!-- mobile nav -->
-  <div class="sm:hidden">
+  <div class="sm:hidden mt-2">
     <nav class="flex flex-wrap px-1 text-gray-600">
       <router-link v-for="race in races" :key="race.name" :to="'/race/' + race.name" class="flex items-center text-sm group w-1/3 pb-2">
         <Track :path="race.svg_path" />
