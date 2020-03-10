@@ -58,8 +58,8 @@
     </div>
 
     <div class="mt-3">
-      <div class="sm:max-w-xs sm:rounded-md shadow-sm relative text-gray-700">
-        <select v-model="selected" class="block form-select w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5 py-2 pr-10 rounded-md sm:mx-0 mx-2" :class="{ 'pl-3': !selected, 'pl-10': selected }">
+      <div class="sm:max-w-xs sm:rounded-md shadow-sm relative text-gray-700 mx-2 sm:mx-0">
+        <select v-model="selected" class="block form-select w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5 py-2 pr-10 rounded-md" :class="{ 'pl-3': !selected, 'pl-10': selected }">
           <option disabled selected value="">Save Timezone</option>
           <option v-for="(option, index) in timezones" :value="option" :key="index">
             {{ option }}
