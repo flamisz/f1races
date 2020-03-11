@@ -58,7 +58,6 @@ export default {
 
   created () {
     this.fetchData()
-    console.log('created')
   },
 
   methods: {
