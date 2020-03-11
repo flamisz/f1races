@@ -1,7 +1,15 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
-  plugins: [
-    require('@tailwindcss/ui')({
-      layout: 'sidebar',
-    })
-  ]
+  theme: {
+    fontFamily: {
+      sans: [
+          '"Roboto Slab"',
+          ...defaultTheme.fontFamily.sans,
+        ]
+    }
+  },
+  variants: {
+  	boxShadow: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+  }
 }
