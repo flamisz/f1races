@@ -1,16 +1,18 @@
 <template>
 <div>
   <!-- desktop nav -->
-  <div class="pr-4 w-64 flex-shrink-0 sm:block hidden overflow-y-auto h-screen">
-    <nav>
-      <router-link v-for="race in races" :key="race.name" :to="'/race/' + race.name" class="flex items-center text-sm p-2 group">
-        <Track :path="race.svg_path" />
-        <span class="truncate capitalize">{{ race.name }}</span>
-        <span class="ml-auto text-xs tracking-tighter font-mono">
-          {{ raceDate(race) }}
-        </span>
-      </router-link>
-    </nav>
+  <div class=" sm:flex hidden overflow-hidden h-screen pl-6">
+    <div class="overflow-y-auto pr-4 w-64 flex-shrink-0">
+      <nav>
+        <router-link v-for="race in races" :key="race.name" :to="'/race/' + race.name" class="flex items-center text-sm p-2 group">
+          <Track :path="race.svg_path" />
+          <span class="truncate capitalize">{{ race.name }}</span>
+          <span class="ml-auto text-xs tracking-tighter font-mono">
+            {{ raceDate(race) }}
+          </span>
+        </router-link>
+      </nav>
+    </div>
   </div>
 
   <!-- mobile nav -->

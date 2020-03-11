@@ -1,5 +1,5 @@
 <template>
-<div class="w-full max-w-screen-xl mx-auto sm:px-6 sm:flex">
+<div class="w-full max-w-screen-xl mx-auto sm:flex">
   <Nav/>
   
   <!-- content -->
