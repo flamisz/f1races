@@ -9,6 +9,7 @@
           <span class="truncate capitalize">{{ race.name }}</span>
           <span class="ml-auto text-xs tracking-tighter font-mono">
             {{ raceDate(race) }}
+            <span v-if="race.extra" class="font-extrabold text-lg" :class="{ 'text-red-500': race.extra.level == 'danger', 'text-yellow-500': race.extra.level == 'warning' }" :title="race.extra.short">!</span>
           </span>
         </router-link>
       </nav>
@@ -24,6 +25,7 @@
           <span class="text-md truncate capitalize">{{ race.name }}</span>
           <span class="text-xxs">
             {{ raceDate(race) }}
+            <span v-if="race.extra" class="font-extrabold" :class="{ 'text-red-500': race.extra.level == 'danger', 'text-yellow-500': race.extra.level == 'warning' }" :title="race.extra.short">!</span>
           </span>
         </div>
       </router-link>
