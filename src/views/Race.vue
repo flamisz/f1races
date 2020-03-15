@@ -20,7 +20,7 @@
         <div class="border-b border-gray-200 px-4 py-5 sm:px-6">
           <h2 class="sm:text-2xl text-xl">
             <span class="highlight">{{ race.title }}</span>
-            <span v-if="race.extra" class="uppercase rounded-full text-sm px-2 py-1 ml-2 font-semibold leading-tight" :class="{ 'bg-red-300 text-red-700': race.extra.level == 'danger', 'bg-yellow-300 text-yellow-700': race.extra.level == 'warning' }"> {{ race.extra.short }}</span>
+            <span v-if="race.extra" class="uppercase rounded-full text-xs sm:text-sm px-2 py-1 ml-2 font-semibold leading-tight" :class="{ 'bg-red-100 text-red-700': race.extra.level == 'danger', 'bg-yellow-100 text-yellow-700': race.extra.level == 'warning' }"> {{ race.extra.short }}</span>
           </h2>
 
           <p class="mt-1">
@@ -33,7 +33,7 @@
             </button>
           </p>
 
-          <p v-if="race.extra" class="mt-2 px-4 py-2 border-2 border-red-300 rounded-lg text-gray-700" :class="{ 'border-red-300': race.extra.level == 'danger', 'border-orange-300': race.extra.level == 'warning' }">
+          <p v-if="race.extra" class="mt-2 sm:px-4 sm:py-2 px-2 py-1 sm:text-base text-sm border-2 border-red-300 rounded-lg text-gray-700" :class="{ 'border-red-300': race.extra.level == 'danger', 'border-orange-300': race.extra.level == 'warning' }">
             {{ race.extra.long }}
           </p>
         </div>
