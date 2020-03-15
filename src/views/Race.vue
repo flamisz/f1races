@@ -19,8 +19,10 @@
       <div class="bg-white shadow sm:rounded-lg">
         <div class="border-b border-gray-200 px-4 py-5 sm:px-6">
           <h2 class="sm:text-2xl text-xl">
-            <span class="highlight ">{{ race.title }}</span>
+            <span class="highlight">{{ race.title }}</span>
+            <span v-if="race.extra" class="uppercase rounded-full text-sm px-2 py-1 ml-2 font-semibold leading-tight" :class="{ 'bg-red-300 text-red-700': race.extra.level == 'danger', 'bg-yellow-300 text-yellow-700': race.extra.level == 'warning' }"> {{ race.extra.short }}</span>
           </h2>
+
           <p class="mt-1">
             <button v-if="tz !== race.tz" type="button" @click.prevent="tz = race.tz" class="text-sm text-gray-500 border-b-2 border-yellow-400 leading-none hover:text-gray-600" title="Race timezone">
               {{ race.tz }}
@@ -29,6 +31,10 @@
             <button v-if="tz === race.tz" type="button" @click.prevent="tz = localTz" class="text-sm text-gray-500 border-b-2 border-yellow-400 leading-none hover:text-gray-600" title="Your timezone">
               {{ localTz }}
             </button>
+          </p>
+
+          <p v-if="race.extra" class="mt-2 px-4 py-2 border-2 border-red-300 rounded-lg text-gray-700" :class="{ 'border-red-300': race.extra.level == 'danger', 'border-orange-300': race.extra.level == 'warning' }">
+            {{ race.extra.long }}
           </p>
         </div>
 
