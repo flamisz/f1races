@@ -10,6 +10,11 @@ const races = {
     tz: "Australia/Melbourne",
     circuit_id: "albert_park",
     name: "australia",
+    extra: {
+      level: "danger",
+      short: "canceled",
+      long: "Following the confirmation that a member of the McLaren Racing Team has tested positive for COVID-19 and the team’s decision to withdraw from the Australian Grand Prix, Formula 1 and the FIA, with the full support of the Australian Grand Prix Corporation (AGPC) have therefore taken the decision that all Formula 1 activity for the Australian Grand Prix are cancelled."
+    },
     svg_path: "M2 9C2 8.66667 2.3 7.5 3.5 5.5L6 5L8 7L7.5 7.5L8.5 9.5L9.5 11H12L12.5 10.5H16L18 12.5L16.5 14.5L15 13.5L14 15L7.5 14V13L2.5 11.5V10.5L2 9Z"
   },
 
@@ -24,6 +29,11 @@ const races = {
     tz: "Asia/Bahrain",
     circuit_id: "bahrain",
     name: "bahrain",
+    extra: {
+      level: "danger",
+      short: "postponed",
+      long: "Postponed due to the continued global spread of coronavirus."
+    },
     svg_path: "M3.5 12L4.5 5L7.5 7.5L8 8V9.5L10.5 11L10 11.5L6 11L5.5 12L14 12.5L14.5 11.5L14 10.5L12 9.5L11.5 8.5L12.5 6H13L18 14L17 14.5H3L4 13.5L3.5 12Z"
   },
 
@@ -38,6 +48,11 @@ const races = {
     tz: "Asia/Ho_Chi_Minh",
     circuit_id: "hanoi",
     name: "vietnam",
+    extra: {
+      level: "danger",
+      short: "postponed",
+      long: "Postponed due to the continued global spread of coronavirus."
+    },
     svg_path: "M3.5 12L4.5 5L7.5 7.5L8 8V9.5L10.5 11L10 11.5L6 11L5.5 12L14 12.5L14.5 11.5L14 10.5L12 9.5L11.5 8.5L12.5 6H13L18 14L17 14.5H3L4 13.5L3.5 12Z"
   },
 
@@ -53,7 +68,9 @@ const races = {
     circuit_id: "shanghai",
     name: "china",
     extra: {
-      postponed: true
+      level: "danger",
+      short: "postponed",
+      long: "Postponed as a result of the novel coronavirus outbreak."
     },
     svg_path: "M9.5 4.5L6 14L1.5 14.5L1 15.5H17.5L18.5 15L19 14L18 12.5L17 13V14H11L10.5 12L11.6875 12.5L13 12V11L12 9L12.5 7.5H17.5L18 6.5L14.5 5.5L11 6.25L10 5.5V5H10.5L11.5 5.5L11.6875 5V4.5L11 4H10L9.5 4.5Z"
   },
@@ -223,9 +240,7 @@ const races = {
     tz: "Asia/Singapore",
     circuit_id: "marina_bay",
     name: "singapore",
-    extra: {
-      night: true
-    },
+    night: true,
     svg_path: "M18 12L17 13H14V11.5H12.5L12 13L9.5 12L8.5 11L5.5 9.5L3.5 15L2.5 13.5L2 12.5L1 12L4 7L5.5 8.5L7 6.5L10.5 9L16.5 9.5L15 6.5L16 5L16.5 5.5L17.5 6L18 12Z"
   },
 
