@@ -6,7 +6,7 @@
       <nav>
         <router-link v-for="race in races" :key="race.name" :to="'/race/' + race.name" class="flex items-center text-sm p-2 group">
           <Track :path="race.svg_path" />
-          <span class="truncate capitalize">{{ race.name }}</span>
+          <span class="truncate capitalize">{{ race.name.replace('-', ' ') }}</span>
           <span class="ml-auto text-xs tracking-tighter font-mono">
             {{ raceDate(race) }}
             <span v-if="race.extra" class="font-extrabold text-lg" :class="{ 'text-red-500': race.extra.level == 'danger', 'text-yellow-500': race.extra.level == 'warning' }" :title="race.extra.short">!</span>
@@ -22,7 +22,7 @@
       <router-link v-for="race in races" :key="race.name" :to="'/race/' + race.name" class="flex items-center text-sm group w-1/3 pb-2">
         <Track :path="race.svg_path" />
         <div class="flex flex-col leading-tight truncate">
-          <span class="text-md truncate capitalize">{{ race.name }}</span>
+          <span class="text-md truncate capitalize">{{ race.name.replace('-', ' ') }}</span>
           <span class="text-xxs">
             {{ raceDate(race) }}
             <span v-if="race.extra" class="font-extrabold" :class="{ 'text-red-500': race.extra.level == 'danger', 'text-yellow-500': race.extra.level == 'warning' }" :title="race.extra.short">!</span>
