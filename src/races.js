@@ -30,7 +30,7 @@ const races = {
     circuit_id: "bahrain",
     name: "bahrain",
     extra: {
-      level: "danger",
+      level: "warning",
       short: "postponed",
       long: "Postponed due to the continued global spread of coronavirus."
     },
@@ -49,7 +49,7 @@ const races = {
     circuit_id: "hanoi",
     name: "vietnam",
     extra: {
-      level: "danger",
+      level: "warning",
       short: "postponed",
       long: "Postponed due to the continued global spread of coronavirus."
     },
@@ -68,7 +68,7 @@ const races = {
     circuit_id: "shanghai",
     name: "china",
     extra: {
-      level: "danger",
+      level: "warning",
       short: "postponed",
       long: "Postponed as a result of the novel coronavirus outbreak."
     },
@@ -93,9 +93,9 @@ const races = {
     title: 'Formula 1 Gran Premio De España 2020',
     times: {
         from: "2020-05-08",
-        to: "2020-05-11",
+        to: "2020-05-10",
         qualification: "2020-05-10T13:00:00Z",
-        race: "2020-05-11T13:10:00Z"
+        race: "2020-05-10T13:10:00Z"
     },
     tz: "Europe/Madrid",
     circuit_id: "catalunya",
@@ -345,13 +345,26 @@ export function getRaces () {
 
 export function nextRace () {
   let today = moment()
-  let from = ''
   let race = ''
-  for(race in races) {
-    from = moment(races[race].times.from)
+  for (race in races) {
+    let from = moment(races[race].times.from)
     if (today.isBefore(from)) {
       break
     }
   }
   return race
+}
+
+export function actualRace () {
+  let today = moment()
+  let actualRace = ''
+  for (let race in races) {
+    let from = moment(races[race].times.from)
+    let to = moment(races[race].times.to)
+    if (today.isAfter(from) && today.isBefore(to)) {
+      actualRace = race
+      break
+    }
+  }
+  return actualRace
 }

@@ -23,13 +23,13 @@
         </div>
 
         <div class="mt-4 flex flex-col max-w-sm mb-4 sm:mx-0 mx-2">
-          <button type="button" class="items-center px-3 py-2 border border-transparent text-sm uppercase tracking-wider font-semibold font-medium rounded-full text-gray-800 bg-yellow-400 hover:bg-gray-800 hover:text-yellow-400 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-400 transition ease-in-out duration-150 mb-2">
-            Next: {{ actualRace }}
-          </button>
+          <router-link :to="'/race/' + nextRace" class="text-center px-3 py-2 border border-transparent text-sm uppercase tracking-wider font-semibold font-medium rounded-full text-gray-800 bg-yellow-400 hover:bg-gray-800 hover:text-yellow-400 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-400 transition ease-in-out duration-150 mb-4">
+            Next: {{ nextRace }}
+          </router-link>
 
-          <button type="button" class="items-center px-3 py-2 border border-transparent text-sm uppercase tracking-wider font-semibold font-medium rounded-full text-gray-800 bg-yellow-400 hover:bg-gray-800 hover:text-yellow-400 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-400 transition ease-in-out duration-150">
+          <router-link v-if="actualRace" :to="'/race/' + actualRace" class="text-center px-3 py-2 border border-transparent text-sm uppercase tracking-wider font-semibold font-medium rounded-full text-gray-800 bg-yellow-400 hover:bg-gray-800 hover:text-yellow-400 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-400 transition ease-in-out duration-150">
             This weekend: {{ actualRace }}
-          </button>
+          </router-link>
         </div>
       </div>
     </div>
@@ -38,7 +38,7 @@
 
 <script>
 // @ is an alias to /src
-import { nextRace } from '@/races'
+import { nextRace, actualRace } from '@/races'
 
 export default {
   name: 'Home',
@@ -57,7 +57,7 @@ export default {
   methods: {
     fetchData () {
       this.nextRace = nextRace()
-      this.actualRace = nextRace()
+      this.actualRace = actualRace()
     },
   }
 }

@@ -6,7 +6,8 @@ module.exports = {
       sans: [
           '"Roboto Slab"',
           ...defaultTheme.fontFamily.sans,
-        ]
+        ],
+      mono: [...defaultTheme.fontFamily.mono]
     }
   },
   variants: {
