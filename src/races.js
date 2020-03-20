@@ -86,6 +86,11 @@ const races = {
     tz: "Europe/Amsterdam",
     circuit_id: "zandvoort",
     name: "netherlands",
+    extra: {
+      level: "warning",
+      short: "postponed",
+      long: "Postponed due to the global spread of the coronavirus"
+    },
     svg_path: "M9.5 4.5L6 14L1.5 14.5L1 15.5H17.5L18.5 15L19 14L18 12.5L17 13V14H11L10.5 12L11.6875 12.5L13 12V11L12 9L12.5 7.5H17.5L18 6.5L14.5 5.5L11 6.25L10 5.5V5H10.5L11.5 5.5L11.6875 5V4.5L11 4H10L9.5 4.5Z"
   },
 
@@ -100,6 +105,11 @@ const races = {
     tz: "Europe/Madrid",
     circuit_id: "catalunya",
     name: "spain",
+    extra: {
+      level: "warning",
+      short: "postponed",
+      long: "Postponed due to the global spread of the coronavirus"
+    },
     svg_path: "M4 12H18L19 11L18.5 10V8L16 7L15.5 7.5V8.5L16.5 9L17 10.5L10.5 7H10L8 10V11H5.5L3 9.5L3.5 9L6 8.5L7 8V7H3L1.5 7.5L1 9L1.5 10L3 10.5L3.5 11.5L4 12Z"
   },
 
@@ -114,6 +124,11 @@ const races = {
     tz: "Europe/Monaco",
     circuit_id: "monaco",
     name: "monaco",
+    extra: {
+      level: "danger",
+      short: "canceled",
+      long: "Postponed due to the global spread of the coronavirus"
+    },
     svg_path: "M1 12V14V15.5L2.5 16V15.5L2 14V12.5H3L3.5 10L3 9.5L4 8.5L5 7.5L9 9.5L9.5 9L10.5 9.5L13.5 10L15 9.5L16.5 9L19 6L18.5 5.5L18 5L17.5 6L17 5V4L13.5 6V6.5L14 7.5L13.5 8.5H11.5L9 8L4.5 6.5L4 7L2 9.5L1 12Z"
   },
 
