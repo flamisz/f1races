@@ -1,7 +1,7 @@
 <template>
 <div class="w-full max-w-screen-xl mx-auto sm:flex">
   <Nav/>
-  
+
   <!-- content -->
   <router-view/>
 </div>

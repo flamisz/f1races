@@ -127,7 +127,7 @@ const races = {
     extra: {
       level: "danger",
       short: "canceled",
-      long: "Postponed due to the global spread of the coronavirus"
+      long: "Canceled due to the global spread of the coronavirus"
     },
     svg_path: "M1 12V14V15.5L2.5 16V15.5L2 14V12.5H3L3.5 10L3 9.5L4 8.5L5 7.5L9 9.5L9.5 9L10.5 9.5L13.5 10L15 9.5L16.5 9L19 6L18.5 5.5L18 5L17.5 6L17 5V4L13.5 6V6.5L14 7.5L13.5 8.5H11.5L9 8L4.5 6.5L4 7L2 9.5L1 12Z"
   },
