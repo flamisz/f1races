@@ -96,4 +96,26 @@ export default {
   background-position:right .5rem center;
   background-size:1.5em 1.5em
 }
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .3s ease;
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.up-fade-enter-active {
+  transition: all .3s ease;
+}
+.up-fade-leave-active {
+  transition: all .3s ease;
+}
+.up-fade-enter, .up-fade-leave-to {
+  transform: translateY(10px);
+  opacity: 0;
+}
 </style>
