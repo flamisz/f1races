@@ -20,9 +20,10 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,600&display=swap');
 
+/* purgecss start ignore */
 @import "tailwindcss/base";
-
 @import "tailwindcss/components";
+/* purgecss end ignore */
 
 .router-link-exact-active {
   & #track {
