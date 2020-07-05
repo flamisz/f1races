@@ -18,7 +18,7 @@
           <span class="truncate capitalize">{{ race.name.replace('-', ' ') }}</span>
           <span class="ml-auto text-xs tracking-tight">
             {{ raceDate(race) }}
-            <span v-if="race.extra" class="font-extrabold text-lg" :class="{ 'text-red-500': race.extra.level == 'danger', 'text-yellow-500': race.extra.level == 'warning' }" :title="race.extra.short">!</span>
+            <span v-if="race.extra" class="font-bold text-lg" :class="{ 'text-red-500': race.extra.level == 'danger', 'text-yellow-500': race.extra.level == 'warning' }" :title="race.extra.short">!</span>
           </span>
         </router-link>
       </nav>
@@ -34,7 +34,7 @@
           <span class="text-md truncate capitalize">{{ race.name.replace('-', ' ') }}</span>
           <span class="text-xxs">
             {{ raceDate(race) }}
-            <span v-if="race.extra" class="font-extrabold" :class="{ 'text-red-500': race.extra.level == 'danger', 'text-yellow-500': race.extra.level == 'warning' }" :title="race.extra.short">!</span>
+            <span v-if="race.extra" class="font-bold" :class="{ 'text-red-500': race.extra.level == 'danger', 'text-yellow-500': race.extra.level == 'warning' }" :title="race.extra.short">!</span>
           </span>
         </div>
       </router-link>
@@ -64,7 +64,7 @@ export default {
   components: {
     Track
   },
-  
+
   data () {
     return {
       sidebarOpen: false,

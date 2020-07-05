@@ -10,6 +10,7 @@ const races = {
     tz: "Europe/Vienna",
     circuit_id: "red_bull_ring",
     name: "austria1",
+    race_number: 0,
     svg_path: "M4 4L1 4.5L4 8L6.5 13L8.5 15.5L16.5 13.5L19 12.5L17.5 9.5H10.5L9 11L8 11.5L7 11L6 8.5V7.5L7.5 7L10 7.5L12 7L12.5 5.5L4 4Z"
   },
 
@@ -24,6 +25,7 @@ const races = {
     tz: "Europe/Vienna",
     circuit_id: "red_bull_ring",
     name: "austria2",
+    race_number: 1,
     svg_path: "M4 4L1 4.5L4 8L6.5 13L8.5 15.5L16.5 13.5L19 12.5L17.5 9.5H10.5L9 11L8 11.5L7 11L6 8.5V7.5L7.5 7L10 7.5L12 7L12.5 5.5L4 4Z"
   },
 

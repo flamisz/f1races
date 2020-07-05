@@ -24,7 +24,7 @@
               </svg>
 
               <p v-if="info">
-                Hi, I'm Zoltan. You can find me as <a class="border-b-2 border-yellow-400 hover:border-gray-600 font-semibold" href="https://twitter.com/@flamisz">@flamisz</a> on twitter or check my homepage at <a class="border-b-2 border-yellow-400 hover:border-gray-600 font-semibold" href="https://flamiszoltan.me">https://flamiszoltan.me</a>
+                Hi, I'm Zoltan. You can find me as <a class="border-b-2 border-yellow-400 hover:border-gray-600 font-bold" href="https://twitter.com/@flamisz">@flamisz</a> on twitter or check my homepage at <a class="border-b-2 border-yellow-400 hover:border-gray-600 font-bold" href="https://flamiszoltan.me">https://flamiszoltan.me</a>
               </p>
             </div>
 
@@ -34,11 +34,11 @@
         </div>
 
         <div class="mt-4 flex flex-col max-w-sm mb-4 sm:mx-0 mx-2">
-          <router-link :to="'/race/' + nextRace" class="text-center px-3 py-2 border border-transparent text-sm uppercase tracking-wider font-semibold font-medium rounded-full text-gray-800 bg-yellow-400 hover:bg-gray-800 hover:text-yellow-400 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-400 transition ease-in-out duration-150 mb-4">
+          <router-link :to="'/race/' + nextRace" class="text-center px-3 py-2 border border-transparent text-sm uppercase tracking-wider font-bold font-bold rounded-full text-gray-800 bg-yellow-400 hover:bg-gray-800 hover:text-yellow-400 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-400 transition ease-in-out duration-150 mb-4">
             Next: {{ nextRace }}
           </router-link>
 
-          <router-link v-if="actualRace" :to="'/race/' + actualRace" class="text-center px-3 py-2 border border-transparent text-sm uppercase tracking-wider font-semibold font-medium rounded-full text-gray-800 bg-yellow-400 hover:bg-gray-800 hover:text-yellow-400 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-400 transition ease-in-out duration-150">
+          <router-link v-if="actualRace" :to="'/race/' + actualRace" class="text-center px-3 py-2 border border-transparent text-sm uppercase tracking-wider font-bold font-bold rounded-full text-gray-800 bg-yellow-400 hover:bg-gray-800 hover:text-yellow-400 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-400 transition ease-in-out duration-150">
             This weekend: {{ actualRace }}
           </router-link>
         </div>

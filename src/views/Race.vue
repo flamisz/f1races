@@ -20,7 +20,7 @@
         <div class="border-b border-gray-200 px-4 py-5 sm:px-6">
           <h2 class="sm:text-2xl text-xl">
             <span class="highlight">{{ race.title }}</span>
-            <span v-if="race.extra" class="uppercase rounded-full text-xs sm:text-sm px-2 py-1 ml-2 font-semibold leading-tight" :class="{ 'bg-red-100 text-red-700': race.extra.level == 'danger', 'bg-yellow-200 text-yellow-700': race.extra.level == 'warning' }"> {{ race.extra.short }}</span>
+            <span v-if="race.extra" class="uppercase rounded-full text-xs sm:text-sm px-2 py-1 ml-2 font-bold leading-tight" :class="{ 'bg-red-100 text-red-700': race.extra.level == 'danger', 'bg-yellow-200 text-yellow-700': race.extra.level == 'warning' }"> {{ race.extra.short }}</span>
           </h2>
 
           <div class="mt-1 flex">
@@ -33,7 +33,7 @@
             </button>
 
             <transition name="slide-fade">
-              <div v-if="help" class="leading-none text-xs ml-2 flex items-center font-semibold text-purple-500">
+              <div v-if="help" class="leading-none text-xs ml-2 flex items-center font-bold text-purple-500">
                 <svg class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M7.70711 14.7071C7.31658 15.0976 6.68342 15.0976 6.29289 14.7071L2.29289 10.7071C1.90237 10.3166 1.90237 9.68342 2.29289 9.29289L6.29289 5.29289C6.68342 4.90237 7.31658 4.90237 7.70711 5.29289C8.09763 5.68342 8.09763 6.31658 7.70711 6.70711L5.41421 9L17 9C17.5523 9 18 9.44771 18 10C18 10.5523 17.5523 11 17 11L5.41421 11L7.70711 13.2929C8.09763 13.6834 8.09763 14.3166 7.70711 14.7071Z" fill="currentColor"/>
                 </svg>
@@ -50,17 +50,17 @@
         <div class="sm:flex">
           <div class="sm:w-1/2 border-b sm:border-b-0 px-4 py-5 sm:px-6">
             <span class="sketch-underline text-base sm:text-lg">Race</span>
-            <p class="mt-2 lg:text-4xl md:text-3xl text-2xl leading-tight font-semibold">
+            <p class="mt-2 lg:text-4xl md:text-3xl text-2xl leading-tight font-bold">
               {{ raceTime.date }}
             </p>
-            <p class="lg:text-5xl md:text-4xl text-3xl leading-tight font-semibold">
+            <p class="lg:text-5xl md:text-4xl text-3xl leading-tight font-bold">
               {{ raceTime.time }}
             </p>
             <div class="text-gray-500 text-xs sm:text-sm mt-1 flex" title="Timezone">
               <span>{{ tz }}</span>
 
               <transition name="slide-fade">
-                <div v-if="help" class="leading-none text-xs ml-2 flex items-center font-semibold text-purple-500">
+                <div v-if="help" class="leading-none text-xs ml-2 flex items-center font-bold text-purple-500">
                   <svg class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7.70711 14.7071C7.31658 15.0976 6.68342 15.0976 6.29289 14.7071L2.29289 10.7071C1.90237 10.3166 1.90237 9.68342 2.29289 9.29289L6.29289 5.29289C6.68342 4.90237 7.31658 4.90237 7.70711 5.29289C8.09763 5.68342 8.09763 6.31658 7.70711 6.70711L5.41421 9L17 9C17.5523 9 18 9.44771 18 10C18 10.5523 17.5523 11 17 11L5.41421 11L7.70711 13.2929C8.09763 13.6834 8.09763 14.3166 7.70711 14.7071Z" fill="currentColor"/>
                   </svg>
@@ -72,10 +72,10 @@
 
           <div class="sm:w-1/2 px-4 py-5 sm:px-6">
             <span class="sketch-underline text-base sm:text-lg">Qualifying</span>
-            <p class="mt-2 lg:text-4xl md:text-3xl text-2xl leading-tight font-semibold">
+            <p class="mt-2 lg:text-4xl md:text-3xl text-2xl leading-tight font-bold">
               {{ qualificationTime.date }}
             </p>
-            <p class="lg:text-5xl md:text-4xl text-3xl leading-tight font-semibold">
+            <p class="lg:text-5xl md:text-4xl text-3xl leading-tight font-bold">
               {{ qualificationTime.time }}
             </p>
             <svg class="h-4 w-4 text-purple-600 ml-auto cursor-pointer" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" @click="help = !help">
@@ -102,7 +102,7 @@
         </div>
 
         <transition name="up-fade">
-          <div v-if="help" class="leading-none text-xs mt-1 flex items-center font-semibold text-purple-500">
+          <div v-if="help" class="leading-none text-xs mt-1 flex items-center font-bold text-purple-500">
             <svg class="h-4 w-4 mr-1 ml-2 sm:ml-0" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 7.70711C4.90237 7.31658 4.90237 6.68342 5.29289 6.29289L9.29289 2.29289C9.68342 1.90237 10.3166 1.90237 10.7071 2.29289L14.7071 6.29289C15.0976 6.68342 15.0976 7.31658 14.7071 7.70711C14.3166 8.09763 13.6834 8.09763 13.2929 7.70711L11 5.41421L11 17C11 17.5523 10.5523 18 10 18C9.44772 18 9 17.5523 9 17L9 5.41421L6.70711 7.70711C6.31658 8.09763 5.68342 8.09763 5.29289 7.70711Z" fill="currentColor"/>
             </svg>
@@ -111,11 +111,11 @@
         </transition>
       </div>
 
-      <div class="mt-8 px-4 sm:px-6 lg:px-8 hidden">
-        <button type="button" class="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs leading-4 font-medium rounded text-gray-800 bg-yellow-200 hover:bg-yellow-100 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-300 transition ease-in-out duration-150 mr-2">
+      <div class="mt-3">
+        <button type="button" class="inline-flex items-center px-3 py-2 font-bold border border-transparent text-sm leading-4 rounded text-gray-700 bg-yellow-300 hover:bg-yellow-100 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-300 transition ease-in-out duration-150 mr-2">
           Race Result
         </button>
-        <button type="button" class="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs leading-4 font-medium rounded text-gray-800 bg-yellow-200 hover:bg-yellow-100 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-300 transition ease-in-out duration-150">
+        <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-bold rounded text-gray-700 bg-yellow-300 hover:bg-yellow-100 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-300 transition ease-in-out duration-150">
           Qualifying Result
         </button>
       </div>
