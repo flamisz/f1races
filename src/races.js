@@ -139,12 +139,13 @@ export function nextRace () {
 }
 
 export function actualRace () {
-  let today = moment()
+  let today = moment().millisecond(0).second(0).minute(0).hour(0)
   let actualRace = ''
   for (let race in races) {
     let from = moment(races[race].times.from)
     let to = moment(races[race].times.to)
-    if (today.isAfter(from) && today.isBefore(to)) {
+    console.log(today, from, to)
+    if (today.isSameOrAfter(from) && today.isSameOrBefore(to)) {
       actualRace = race
       break
     }
