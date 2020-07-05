@@ -115,7 +115,7 @@
         <button type="button" class="inline-flex items-center px-3 py-2 font-bold border border-transparent text-sm leading-4 rounded text-gray-700 bg-yellow-300 hover:bg-yellow-100 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-300 transition ease-in-out duration-150 mr-2">
           Race Result
         </button>
-        <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-bold rounded text-gray-700 bg-yellow-300 hover:bg-yellow-100 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-300 transition ease-in-out duration-150">
+        <button @click="loadQualifying" type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-bold rounded text-gray-700 bg-yellow-300 hover:bg-yellow-100 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-300 transition ease-in-out duration-150">
           Qualifying Result
         </button>
       </div>
@@ -221,6 +221,10 @@ export default {
       this.tz = this.localTz
       this.selected = ''
       localStorage.removeItem('tz')
+    },
+
+    loadQualifying() {
+
     }
   }
 }
