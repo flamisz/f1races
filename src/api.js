@@ -4,7 +4,7 @@ export function getResults (circuit_id, index, results) {
             return response.json();
         })
         .then(function(myJson) {
-            if (myJson && !! myJson.MRData.RaceTable.Races.length) {
+            if (myJson && !! myJson.MRData.RaceTable.Races.length && !! myJson.MRData.RaceTable.Races[index]) {
                 results(null, myJson.MRData.RaceTable.Races[index].Results)
             } else {
                 results(null, null)
@@ -19,7 +19,7 @@ export function getQualifying (circuit_id, index, results) {
             return response.json();
         })
         .then(function(myJson) {
-            if (myJson && !! myJson.MRData.RaceTable.Races.length) {
+            if (myJson && !! myJson.MRData.RaceTable.Races.length && !! myJson.MRData.RaceTable.Races[index]) {
                 results(null, myJson.MRData.RaceTable.Races[index].QualifyingResults)
             } else {
                 results(null, null)

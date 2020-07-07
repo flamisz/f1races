@@ -111,20 +111,20 @@
                     </transition>
                 </div>
 
-                <div class="mt-3">
-                    <button @click="result = true" type="button" class="inline-flex items-center px-3 py-2 font-bold border border-transparent text-sm leading-4 rounded text-gray-700 bg-yellow-300 hover:bg-yellow-100 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-300 transition ease-in-out duration-150 mr-2">
+                <div class="mt-3 mx-2 sm:mx-0">
+                    <button @click="result = true; qualifying = false" type="button" class="inline-flex items-center px-3 py-2 font-bold border border-transparent text-sm leading-4 rounded text-gray-700 bg-yellow-300 hover:bg-yellow-100 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-300 transition ease-in-out duration-150 mr-2">
                         Race Result
                     </button>
-                    <button @click="qualifying = true" type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-bold rounded text-gray-700 bg-yellow-300 hover:bg-yellow-100 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-300 transition ease-in-out duration-150">
+                    <button @click="qualifying = true; result = false" type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-bold rounded text-gray-700 bg-yellow-300 hover:bg-yellow-100 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-300 transition ease-in-out duration-150">
                         Qualifying Result
                     </button>
                 </div>
 
-                <div v-if="qualifying">
+                <div v-show="qualifying">
                     <Results :circuit="circuit" :qualifying="true" :number="race_number" />
                 </div>
 
-                <div v-if="result">
+                <div v-show="result">
                     <Results :circuit="circuit" :qualifying="false" :number="race_number" />
                 </div>
             </div>
@@ -179,6 +179,9 @@
                 } else {
                     this.tz = moment.tz.guess()
                 }
+
+                this.qualifying = false
+                this.result = false
             },
             selected: function(val) {
                 if (val) {

@@ -54,6 +54,7 @@ const races = {
     tz: "Europe/London",
     circuit_id: "silverstone",
     name: "great-britain1",
+    race_number: 0,
     svg_path: "M2 4L1 9L3.5 11.5L4.5 10.5L3.5 10L3 9.25L8.5 5.1875H9L10.5 6.5H8.8125L10 8.5L9 11L9.5 12L13.5 16L14.5 15.5V14.5L17 13H18L19 12L12.5 5.5L11.5 4H10.5L8.8125 3L7.5 4L4 3L3 3.5L2 4Z"
   },
 
@@ -68,6 +69,7 @@ const races = {
     tz: "Europe/London",
     circuit_id: "silverstone",
     name: "great-britain2",
+    race_number: 1,
     svg_path: "M2 4L1 9L3.5 11.5L4.5 10.5L3.5 10L3 9.25L8.5 5.1875H9L10.5 6.5H8.8125L10 8.5L9 11L9.5 12L13.5 16L14.5 15.5V14.5L17 13H18L19 12L12.5 5.5L11.5 4H10.5L8.8125 3L7.5 4L4 3L3 3.5L2 4Z"
   },
 
