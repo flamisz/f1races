@@ -148,7 +148,7 @@ export function actualRace () {
   for (let race in races) {
     let from = moment(races[race].times.from)
     let to = moment(races[race].times.to)
-    console.log(today, from, to)
+
     if (today.isSameOrAfter(from) && today.isSameOrBefore(to)) {
       actualRace = race
       break
