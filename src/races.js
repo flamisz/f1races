@@ -10,6 +10,7 @@ const races = {
     tz: "Europe/Vienna",
     circuit_id: "red_bull_ring",
     name: "austria1",
+    race_number: 0,
     svg_path: "M4 4L1 4.5L4 8L6.5 13L8.5 15.5L16.5 13.5L19 12.5L17.5 9.5H10.5L9 11L8 11.5L7 11L6 8.5V7.5L7.5 7L10 7.5L12 7L12.5 5.5L4 4Z"
   },
 
@@ -24,6 +25,7 @@ const races = {
     tz: "Europe/Vienna",
     circuit_id: "red_bull_ring",
     name: "austria2",
+    race_number: 1,
     svg_path: "M4 4L1 4.5L4 8L6.5 13L8.5 15.5L16.5 13.5L19 12.5L17.5 9.5H10.5L9 11L8 11.5L7 11L6 8.5V7.5L7.5 7L10 7.5L12 7L12.5 5.5L4 4Z"
   },
 
@@ -52,6 +54,7 @@ const races = {
     tz: "Europe/London",
     circuit_id: "silverstone",
     name: "great-britain1",
+    race_number: 0,
     svg_path: "M2 4L1 9L3.5 11.5L4.5 10.5L3.5 10L3 9.25L8.5 5.1875H9L10.5 6.5H8.8125L10 8.5L9 11L9.5 12L13.5 16L14.5 15.5V14.5L17 13H18L19 12L12.5 5.5L11.5 4H10.5L8.8125 3L7.5 4L4 3L3 3.5L2 4Z"
   },
 
@@ -66,6 +69,7 @@ const races = {
     tz: "Europe/London",
     circuit_id: "silverstone",
     name: "great-britain2",
+    race_number: 1,
     svg_path: "M2 4L1 9L3.5 11.5L4.5 10.5L3.5 10L3 9.25L8.5 5.1875H9L10.5 6.5H8.8125L10 8.5L9 11L9.5 12L13.5 16L14.5 15.5V14.5L17 13H18L19 12L12.5 5.5L11.5 4H10.5L8.8125 3L7.5 4L4 3L3 3.5L2 4Z"
   },
 
@@ -139,12 +143,13 @@ export function nextRace () {
 }
 
 export function actualRace () {
-  let today = moment()
+  let today = moment().millisecond(0).second(0).minute(0).hour(0)
   let actualRace = ''
   for (let race in races) {
     let from = moment(races[race].times.from)
     let to = moment(races[race].times.to)
-    if (today.isAfter(from) && today.isBefore(to)) {
+
+    if (today.isSameOrAfter(from) && today.isSameOrBefore(to)) {
       actualRace = race
       break
     }
