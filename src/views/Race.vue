@@ -112,10 +112,10 @@
                 </div>
 
                 <div class="mt-3 mx-2 sm:mx-0">
-                    <button @click="result = true; qualifying = false" type="button" class="inline-flex items-center px-3 py-2 font-bold border border-transparent text-sm leading-4 rounded text-gray-700 bg-yellow-300 hover:bg-yellow-100 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-300 transition ease-in-out duration-150 mr-2">
+                    <button @click="result = true; qualifying = false" type="button" class="text-center px-3 py-2 border border-transparent text-sm uppercase tracking-wider font-bold font-bold rounded-full text-gray-800 bg-yellow-400 hover:bg-gray-800 hover:text-yellow-400 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-400 transition ease-in-out duration-150 mb-4 mr-2">
                         Race Result
                     </button>
-                    <button @click="qualifying = true; result = false" type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-bold rounded text-gray-700 bg-yellow-300 hover:bg-yellow-100 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-300 transition ease-in-out duration-150">
+                    <button @click="qualifying = true; result = false" type="button" class="text-center px-3 py-2 border border-transparent text-sm uppercase tracking-wider font-bold font-bold rounded-full text-gray-800 bg-yellow-400 hover:bg-gray-800 hover:text-yellow-400 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-400 transition ease-in-out duration-150 mb-4">
                         Qualifying Result
                     </button>
                 </div>
@@ -133,9 +133,7 @@
 </template>
 
 <script>
-    import {
-        getRace
-    } from '@/races'
+    import { getRace } from '@/races'
     import moment from 'moment-timezone'
     import Results from '@/components/Results.vue'
 

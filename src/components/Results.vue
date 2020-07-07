@@ -24,6 +24,13 @@
             <div v-if="results" class="">
                 <div class="bg-white shadow p-4 text-gray-600 sm:rounded-lg">
                     <table class="w-full">
+                        <tr class="bg-gray-800 text-yellow-400">
+                            <td class="font-mono text-xs border-b border-t border-gray-200 py-2">#</td>
+                            <td class="border-b border-t border-gray-200 py-2">Name</td>
+                            <td class="border-b border-t border-gray-200 py-2">Car</td>
+                            <td v-if="!qualifying" class="border-b border-t border-gray-200 py-2">Points</td>
+                            <td v-if="qualifying" class="border-b border-t border-gray-200 py-2">Time</td>
+                        </tr>
                         <tr v-for="(driver, index) in results" :key="index">
                             <td class="font-mono text-xs border-b border-t border-gray-200 py-2">{{ driver.position }}</td>
                             <td class="border-b border-t border-gray-200 py-2">{{ driver.Driver.givenName + ' ' + driver.Driver.familyName }}</td>

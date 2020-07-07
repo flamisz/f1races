@@ -42,6 +42,23 @@
             This weekend: {{ actualRace }}
           </router-link>
         </div>
+
+        <div class="mt-3 mx-2 sm:mx-0">
+            <button @click="driver = true; constructor = false" type="button" class="text-center px-3 py-2 border border-transparent text-sm uppercase tracking-wider font-bold font-bold rounded-full text-gray-800 bg-yellow-400 hover:bg-gray-800 hover:text-yellow-400 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-400 transition ease-in-out duration-150 mb-4 mr-2">
+                Driver Standings
+            </button>
+            <button @click="constructor = true; driver = false" type="button" class="text-center px-3 py-2 border border-transparent text-sm uppercase tracking-wider font-bold font-bold rounded-full text-gray-800 bg-yellow-400 hover:bg-gray-800 hover:text-yellow-400 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-400 transition ease-in-out duration-150 mb-4">
+                Constructor Standings
+            </button>
+        </div>
+
+        <div v-show="driver">
+            <Standings :driver="true" />
+        </div>
+
+        <div v-show="constructor">
+            <Standings :driver="false" />
+        </div>
       </div>
     </div>
   </div>
@@ -50,15 +67,22 @@
 <script>
 // @ is an alias to /src
 import { nextRace, actualRace } from '@/races'
+import Standings from '@/components/Standings.vue'
+
 
 export default {
   name: 'Home',
+  components: {
+    Standings
+  },
 
   data () {
     return {
       nextRace: '',
       actualRace: '',
-      info: false
+      info: false,
+      driver: false,
+      constructor: false
     }
   },
 

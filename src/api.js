@@ -27,3 +27,33 @@ export function getQualifying (circuit_id, index, results) {
         })
         .catch(error => results(new Error(error)));
 }
+
+export function getDriver (results) {
+    fetch(`https://ergast.com/api/f1/2020/driverStandings.json`)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(myJson) {
+            if (myJson && !! myJson.MRData.StandingsTable.StandingsLists.length) {
+                results(null, myJson.MRData.StandingsTable.StandingsLists[0].DriverStandings)
+            } else {
+                results(null, null)
+            }
+        })
+        .catch(error => results(new Error(error)));
+}
+
+export function getConstructor (results) {
+    fetch(`https://ergast.com/api/f1/2020/constructorStandings.json`)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(myJson) {
+            if (myJson && !! myJson.MRData.StandingsTable.StandingsLists.length) {
+                results(null, myJson.MRData.StandingsTable.StandingsLists[0].ConstructorStandings)
+            } else {
+                results(null, null)
+            }
+        })
+        .catch(error => results(new Error(error)));
+}
