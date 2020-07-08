@@ -35,7 +35,7 @@
                             <tr v-for="(driver, index) in results" :key="index">
                                 <td class="font-mono text-xs border-b border-t border-gray-200 py-2">{{ driver.position }}</td>
                                 <td class="border-b border-t border-gray-200 py-2">{{ driver.Driver.givenName + ' ' + driver.Driver.familyName }}</td>
-                                <td class="border-b border-t border-gray-200 py-2">{{ driver.wins }}</td>
+                                <td class="font-mono text-xs border-b border-t border-gray-200 py-2">{{ driver.wins }}</td>
                                 <td class="border-b border-t border-gray-200 py-2">{{ driver.Constructors[0].name }}</td>
                                 <td class="font-mono text-xs border-b border-t border-gray-200 py-2">{{ driver.points }}</td>
                             </tr>
@@ -53,7 +53,7 @@
                             <tr v-for="(driver, index) in results" :key="index">
                                 <td class="font-mono text-xs border-b border-t border-gray-200 py-2">{{ driver.position }}</td>
                                 <td class="border-b border-t border-gray-200 py-2">{{ driver.Constructor.name }}</td>
-                                <td class="border-b border-t border-gray-200 py-2">{{ driver.wins }}</td>
+                                <td class="font-mono text-xs border-b border-t border-gray-200 py-2">{{ driver.wins }}</td>
                                 <td class="font-mono text-xs border-b border-t border-gray-200 py-2">{{ driver.points }}</td>
                             </tr>
                         </tbody>

@@ -1,6 +1,6 @@
 <template>
-    <div class="overflow-hidden h-screen flex flex-1 flex-col">
-        <div class="overflow-y-auto sm:pr-6 sm:pt-6">
+    <div class="sm:overflow-hidden sm:h-screen flex flex-1 flex-col">
+        <div class="sm:overflow-y-auto sm:pr-6 sm:pt-6">
             <div v-if="loading" class="mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="w-4 h-4 spin mr-2 fill-current">
@@ -111,7 +111,7 @@
                     </transition>
                 </div>
 
-                <div class="mt-3 mx-2 sm:mx-0">
+                <div class="mt-3 mb-8 mx-2 sm:mx-0">
                     <button @click="result = true; qualifying = false" type="button" class="text-center px-3 py-2 border border-transparent text-sm uppercase tracking-wider font-bold font-bold rounded-full text-gray-800 bg-yellow-400 hover:bg-gray-800 hover:text-yellow-400 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-400 transition ease-in-out duration-150 mb-4 mr-2">
                         Race Result
                     </button>
@@ -120,11 +120,11 @@
                     </button>
                 </div>
 
-                <div v-show="qualifying">
+                <div v-show="qualifying" class="-mt-8">
                     <Results :circuit="circuit" :qualifying="true" :number="race_number" />
                 </div>
 
-                <div v-show="result">
+                <div v-show="result" class="-mt-8">
                     <Results :circuit="circuit" :qualifying="false" :number="race_number" />
                 </div>
             </div>
