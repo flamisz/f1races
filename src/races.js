@@ -101,7 +101,7 @@ const races = {
     svg_path: "M6 9.5L15 5H17L18.5 6.77596V7.5L17 6.77596L12.5 8.5L13 10L17 11.5L16.5 13L18.5 14.5L17 15.5L15 15L13 12L11 11L9.5 12L6 12.5L5.5 12L2.5 14L1 14.5L1.5 13.5L4 10.5L5 9.5H6Z"
   },
 
-  'italy': {
+  'italy1': {
     title: 'Formula 1 Gran Premio Heineken D\'italia 2020',
     times: {
         from: "2020-09-04",
@@ -111,8 +111,38 @@ const races = {
     },
     tz: "Europe/Rome",
     circuit_id: "monza",
-    name: "italy",
+    name: "italy1",
+    race_number: 0,
     svg_path: "M3.5 5L1 5.5L4 13.5L8 14L18.5 13.5L19 12L9.5 11L3.5 5Z"
+  },
+
+  'italy2': {
+    title: 'Formula 1 Gran Premio Della Toscana Ferrari 1000 2020',
+    times: {
+        from: "2020-09-11",
+        to: "2020-09-13",
+        qualification: "2020-09-12T13:00:00Z",
+        race: "2020-09-13T13:10:00Z"
+    },
+    tz: "Europe/Rome",
+    circuit_id: "monza",
+    name: "italy2",
+    race_number: 1,
+    svg_path: "M3.5 5L1 5.5L4 13.5L8 14L18.5 13.5L19 12L9.5 11L3.5 5Z"
+  },
+
+  'russia': {
+    title: 'Formula 1 VTB Russian Grand Prix 2020',
+    times: {
+        from: "2020-09-25",
+        to: "2020-09-27",
+        qualification: "2020-09-26T12:00:00Z",
+        race: "2020-09-27T11:10:00Z"
+    },
+    tz: "Europe/Moscow",
+    circuit_id: "sochi",
+    name: "russia",
+    svg_path: "M16.5 10.5L19 6L17.5 5L16 7.5L16.5 8.5L15 9.5L14 9L12.5 9.5L7 7.5L4 8.5L4.5 10.5L4 11.5L1 12V14L2 15.5L6 14L5 12L5.5 10.5L6.5 10L8.5 10.5L9.5 12.5L16.5 10.5Z"
   },
 }
 
