@@ -144,6 +144,34 @@ const races = {
     name: "russia",
     svg_path: "M16.5 10.5L19 6L17.5 5L16 7.5L16.5 8.5L15 9.5L14 9L12.5 9.5L7 7.5L4 8.5L4.5 10.5L4 11.5L1 12V14L2 15.5L6 14L5 12L5.5 10.5L6.5 10L8.5 10.5L9.5 12.5L16.5 10.5Z"
   },
+
+  'germany': {
+    title: 'Formula 1 Aramco Grosser Preis Der Eifel 2020',
+    times: {
+        from: "2020-10-09",
+        to: "2020-10-11",
+        qualification: "2020-10-10T13:00:00Z",
+        race: "2020-10-11T12:10:00Z"
+    },
+    tz: "Europe/Berlin",
+    circuit_id: "nurburgring",
+    name: "germany",
+    svg_path: "M4.5 12L2 12.5C1.66667 12.5 1 12.6 1 13C1 13.4 1.33333 13.5 1.5 13.5L5 12.8269L6.5 13L7 12.5L6.5 11L9.5 9V8C9.5 8 9 7 9.5 7C10 7 10.5 7.5 10.5 7.5C10.8333 7.66667 11.3 8.2 10.5 9C9.7 9.4 9.83333 9.5 10 9.5L17.5 9C17.6667 9 18.1 8.9 18.5 8.5C18.9 8.1 18.6667 8 18.5 8L16.5 7L16 7.5L12 5.5C10.8333 5.66667 8.4 6.1 8 6.5C7.6 6.9 7.83333 7 8 7L8.5 8.5L5 11L4.5 12Z"
+  },
+
+  'portugal': {
+    title: 'Formula 1 Heineken Grande Prémio De Portugal 2020',
+    times: {
+        from: "2020-10-23",
+        to: "2020-10-25",
+        qualification: "2020-10-24T13:00:00Z",
+        race: "2020-10-25T13:10:00Z"
+    },
+    tz: "Europe/Lisbon",
+    circuit_id: "portimao",
+    name: "portugal",
+    svg_path: "M16.5 12.5H2.5L1.5 11V9.5L2.5 8L3.5 9.5L4 10.5H11.5V9.5L8.5 8.5L5.5 9C5.5 9 3.5 7 4.5 7C5.5 7 10 7.5 10 7.5L11 6.5C11 6.5 11 5 12 5C13 5 13.5 5.5 13.5 5.5L14 8.5C14 8.5 15.6 9.5 16 9.5H16.5L15.5 7.5C15.3333 7.33333 15.2 6.9 16 6.5H17L18.5 9.5V11.5C18.5 11.9 17.1667 12.3333 16.5 12.5Z"
+  },
 }
 
 import moment from 'moment-timezone'
