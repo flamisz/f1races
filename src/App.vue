@@ -1,32 +1,26 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+<div class="antialiased text-gray-900 font-mono font-bold min-h-screen bg-white flex justify-center">
+    <div class="w-full max-w-screen-md p-8 m-4 bg-white border border-gray-300 overflow-hiddern rounded-lg shadow-lg">
+        <Nav/>
+
+        <!-- content -->
+        <router-view/>
     </div>
-    <router-view/>
-  </div>
+</div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Nav from '@/components/Nav.vue'
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+export default {
+    components: {
+        Nav
     }
-  }
 }
+</script>
+
+<style lang="scss">
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 </style>
