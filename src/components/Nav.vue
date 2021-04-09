@@ -1,5 +1,6 @@
 <template>
 <div>
+    <router-link to="/">Home</router-link>
     <router-link v-for="(race, name) in races" :key="name" :to="'/race/' + name">
         <div class="flex-row">
             <div>{{ name }}</div>
