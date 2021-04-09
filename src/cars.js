@@ -201,6 +201,6 @@ const cars = {
   },
 };
 
-export default function getCars() {
-  return cars;
+export function getCars() {
+    return cars;
 }
