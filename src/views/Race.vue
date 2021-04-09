@@ -4,8 +4,27 @@
         <div v-if="error">{{ error }}</div>
         <div v-if="race">
             {{ race.title }}
-            {{ race.times.qualification }}
-            {{ race.times.race }}
+            {{ qualificationTime.date }} {{ qualificationTime.time }}
+            {{ raceTime.date }} {{ raceTime.time }}
+        </div>
+
+        <div>
+            <div class="flex">
+                <select v-model="tz" class="">
+                    <option v-for="(option, index) in timezones" :value="option" :key="index">
+                        {{ option }}
+                    </option>
+                </select>
+                <div @click.prevent="clear" v-if="tz !== localTz" class="">
+                    X
+                </div>
+            </div>
+
+            <div @click.prevent="tz = race.tz" v-if="tz !== race.tz" class="">
+                {{ race.tz }}
+            </div>
+
+
         </div>
     </div>
 </template>
@@ -23,16 +42,50 @@ export default {
             race: null,
             error: null,
             loading: true,
+            localTz: moment.tz.guess(),
+            tz: moment.tz.guess(),
+            timezones: moment.tz.names(),
         }
     },
 
     created () {
         this.fetchData()
+
+        if (localStorage.tz) {
+            this.tz = localStorage.tz
+        }
     },
 
     watch: {
         '$route'() {
             this.fetchData()
+
+            this.tz = localStorage.tz ? localStorage.tz : moment.tz.guess()
+        },
+
+        tz: function(val) {
+            if (val) {
+                this.tz = val
+                localStorage.tz = val
+            }
+        }
+    },
+
+    computed: {
+        qualificationTime: function() {
+            let date = moment(this.race.times.qualification)
+            return {
+                date: date.tz(this.tz).format('ddd DD MMM'),
+                time: date.tz(this.tz).format('h:mm A')
+            }
+        },
+
+        raceTime: function() {
+            let date = moment(this.race.times.race)
+            return {
+                date: date.tz(this.tz).format('ddd DD MMM'),
+                time: date.tz(this.tz).format('h:mm A')
+            }
         },
     },
 
@@ -49,6 +102,10 @@ export default {
                     this.race = race
                 }
             })
+        },
+
+        clear() {
+            this.tz = this.localTz
         },
     }
 }
