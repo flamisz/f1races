@@ -24,7 +24,20 @@
                 {{ race.tz }}
             </div>
 
+            <button @click="result = true; qualifying = false" type="button">
+                Race Result
+            </button>
+            <button @click="qualifying = true; result = false" type="button">
+                Qualifying Result
+            </button>
 
+            <div v-show="qualifying">
+                <Results :circuit="circuit" :qualifying="true" />
+            </div>
+
+            <div v-show="result">
+                <Results :circuit="circuit" :qualifying="false" />
+            </div>
         </div>
     </div>
 </template>
@@ -32,10 +45,14 @@
 <script>
 import { getRace } from '@/races'
 import moment from 'moment-timezone'
+import Results from '@/components/Results.vue'
 
 export default {
     name: 'Race',
     props: ['country'],
+    components: {
+        Results
+    },
 
     data () {
         return {
@@ -45,6 +62,8 @@ export default {
             localTz: moment.tz.guess(),
             tz: moment.tz.guess(),
             timezones: moment.tz.names(),
+            qualifying: false,
+            result: false,
         }
     },
 
@@ -61,6 +80,8 @@ export default {
             this.fetchData()
 
             this.tz = localStorage.tz ? localStorage.tz : moment.tz.guess()
+            this.qualifying = false
+            this.result = false
         },
 
         tz: function(val) {
@@ -86,6 +107,10 @@ export default {
                 date: date.tz(this.tz).format('ddd DD MMM'),
                 time: date.tz(this.tz).format('h:mm A')
             }
+        },
+
+        circuit() {
+            return this.race ? this.race.circuit_id : null
         },
     },
 
