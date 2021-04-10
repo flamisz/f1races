@@ -3,26 +3,40 @@
         <div v-if="loading">Loading...</div>
         <div v-if="error">{{ error }}</div>
 
-        <div v-if="race">
-            {{ race.title }}
-            {{ qualificationTime.date }} {{ qualificationTime.time }}
-            {{ raceTime.date }} {{ raceTime.time }}
+        <div v-if="race" class="mb-2 border-gray-400 border-t border-b border-dashed py-2">
+            <div class="font-bold">{{ race.title }}</div>
+            <div class="flex">
+                <div class="w-1/2">
+                    <div class="text-gray-400 text-sm">race</div>
+                    <div>{{ raceTime.date }}</div>
+                    <div>{{ raceTime.time }}</div>
+                </div>
+
+                <div class="w-1/2">
+                    <div class="text-gray-400 text-sm">qualifying</div>
+                    <div>{{ qualificationTime.date }}</div>
+                    <div>{{ qualificationTime.time }}</div>
+                </div>
+            </div>
         </div>
 
         <div v-if="race">
-            <div class="flex">
-                <select v-model="tz" class="">
+            <div class="flex sm:w-1/2 mb-2">
+                <select v-model="tz" class="block w-full pl-3 pr-10 border-gray-300 focus:outline-none">
                     <option v-for="(option, index) in timezones" :value="option" :key="index">
                         {{ option }}
                     </option>
                 </select>
-                <div @click.prevent="clear" v-if="tz !== localTz" class="">
-                    X
-                </div>
             </div>
 
-            <div @click.prevent="tz = race.tz" v-if="tz !== race.tz" class="">
-                {{ race.tz }}
+            <div class="flex justify-between mb-2">
+                <div @click.prevent="tz = race.tz" class="text-gray-400 text-sm cursor-pointer">
+                    race timezone
+                </div>
+
+                <div @click.prevent="clear" class="text-gray-400 text-sm cursor-pointer">
+                    your timezone
+                </div>
             </div>
 
             <div class="grid sm:grid-cols-3 sm:gap-4 py-2 mb-2 border-gray-400 border-t border-b border-dashed">
@@ -99,8 +113,8 @@ export default {
 
             let date = moment(this.race.times.qualification)
             return {
-                date: date.tz(this.tz).format('ddd DD MMM'),
-                time: date.tz(this.tz).format('h:mm A')
+                date: date.tz(this.tz).format('ddd DD MMM').toLowerCase(),
+                time: date.tz(this.tz).format('h:mm A').toLowerCase()
             }
         },
 
@@ -111,8 +125,8 @@ export default {
 
             let date = moment(this.race.times.race)
             return {
-                date: date.tz(this.tz).format('ddd DD MMM'),
-                time: date.tz(this.tz).format('h:mm A')
+                date: date.tz(this.tz).format('ddd DD MMM').toLowerCase(),
+                time: date.tz(this.tz).format('h:mm A').toLowerCase()
             }
         },
 
