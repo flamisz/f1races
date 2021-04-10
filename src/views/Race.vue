@@ -2,6 +2,7 @@
     <div>
         <div v-if="loading">Loading...</div>
         <div v-if="error">{{ error }}</div>
+
         <div v-if="race">
             {{ race.title }}
             {{ qualificationTime.date }} {{ qualificationTime.time }}
@@ -24,12 +25,10 @@
                 {{ race.tz }}
             </div>
 
-            <button @click="result = true; qualifying = false" type="button">
-                Race Result
-            </button>
-            <button @click="qualifying = true; result = false" type="button">
-                Qualifying Result
-            </button>
+            <div class="grid sm:grid-cols-3 sm:gap-4 py-2 mb-2 border-gray-400 border-t border-b border-dashed">
+                <div @click.prevent="result = true; qualifying = false" class="font-bold cursor-pointer truncate text-sm sm:text-base hover:text-gray-400" :class="{ 'text-gray-400': result === true }">Race Result</div>
+                <div @click.prevent="qualifying = true; result = false" class="font-bold cursor-pointer truncate text-sm sm:text-base hover:text-gray-400" :class="{ 'text-gray-400': qualifying === true }">Qualifying Result</div>
+            </div>
 
             <div v-show="qualifying">
                 <Results :circuit="circuit" :qualifying="true" />

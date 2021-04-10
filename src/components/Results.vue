@@ -1,18 +1,18 @@
 <template>
-    <div>
-        <div>Results</div>
+    <div class="text-sm sm:text-base">
         <div v-if="loading">Loading...</div>
         <div v-if="error">{{ error }}</div>
 
         <div v-if="!loading && !results">No results yet...</div>
         <transition name="fade">
             <div v-if="results" class="">
-                <div v-for="(driver, index) in results" :key="index" class="flex">
-                    <div>{{ driver.position }}</div>
-                    <div>{{ driver.Driver.givenName + ' ' + driver.Driver.familyName }}</div>
-                    <div>{{ driver.Constructor.name }}</div>
-                    <div>{{ driver.points }}</div>
-                    <div>{{ qTime(driver) }}</div>
+                <div v-for="(driver, index) in results" :key="index" class="flex items-baseline">
+                    <div class="w-1/12">{{ driver.position }}</div>
+                    <div class="w-6/12 truncate">{{ driver.Driver.givenName + ' ' + driver.Driver.familyName }}</div>
+                    <div v-if="qualifying" class="w-3/12 text-xs sm:text-base text-gray-400">{{ qTime(driver) }}</div>
+                    <div v-if="qualifying" class="w-2/12 truncate text-xs sm:text-base text-gray-400">{{ driver.Constructor.name }}</div>
+                    <div v-if="!qualifying" class="w-2/12">{{ driver.points }}</div>
+                    <div v-if="!qualifying" class="w-3/12 truncate text-xs sm:text-base text-gray-400">{{ driver.Constructor.name }}</div>
                 </div>
             </div>
         </transition>
