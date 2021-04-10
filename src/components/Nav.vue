@@ -33,11 +33,9 @@ export default {
         },
 
         raceDate: function (race) {
-            if (moment(race.times.from).month() == moment(race.times.to).month()) {
-                return moment(race.times.from).format('DD') + '-' + moment(race.times.to).format('DD') + ' ' + moment(race.times.from).format('MMM').toLowerCase()
-            }
+            let date = moment(race.times.race).tz(race.tz)
 
-            return moment(race.times.from).format('DD') + ' ' + moment(race.times.from).format('MMM').toLowerCase() + '-' + moment(race.times.to).format('DD') + ' ' + moment(race.times.from).format('MMM').toLowerCase()
+            return date.format('DD MMM').toLowerCase()
         }
     }
 }
