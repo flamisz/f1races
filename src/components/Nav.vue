@@ -1,14 +1,19 @@
 <template>
 <div>
-    <div class="grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-x-4">
+    <div class="grid grid-cols-4 sm:grid-cols-5 gap-2 sm:gap-x-4">
         <router-link v-for="(race, name) in races" :key="name" :to="'/race/' + name">
             <div class="flex-row">
-                <div class="font-bold truncate">{{ name.replace('_', ' ') }}</div>
-                <div class="text-sm">{{ raceDate(race) }}</div>
+                <div class="text-sm sm:text-base font-bold truncate">{{ name.replace('_', ' ') }}</div>
+                <div class="text-xs sm:text-sm">{{ raceDate(race) }}</div>
             </div>
         </router-link>
 
-        <router-link to="/" class="font-bold truncate">home</router-link>
+        <router-link to="/">
+            <div class="flex-row">
+                <div class="text-sm sm:text-base font-bold truncate">home</div>
+                <div class="text-xs sm:text-sm truncate">cars&standings</div>
+            </div>
+        </router-link>
     </div>
 </div>
 </template>

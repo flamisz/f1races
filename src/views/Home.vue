@@ -1,8 +1,11 @@
 <template>
     <div>
-        <div @click.prevent="show = 'cars'">Cars</div>
-        <div @click.prevent="show = 'drivers'">Standings Drivers</div>
-        <div @click.prevent="show = 'constructor'">Standings Constructor</div>
+        <div class="grid sm:grid-cols-3 sm:gap-4 py-2 mb-2 border-gray-400 border-t border-b border-dashed">
+            <div @click.prevent="show = 'cars'" class="font-bold cursor-pointer truncate text-sm sm:text-base">cars</div>
+            <div @click.prevent="show = 'drivers'" class="font-bold cursor-pointer truncate text-sm sm:text-base">driver standings</div>
+            <div @click.prevent="show = 'constructor'" class="font-bold cursor-pointer truncate text-sm sm:text-base">constructor standings</div>
+        </div>
+
         <div v-show="show === 'cars'">
             <Cars />
         </div>

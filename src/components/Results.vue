@@ -7,12 +7,12 @@
         <div v-if="!loading && !results">No results yet...</div>
         <transition name="fade">
             <div v-if="results" class="">
-                <div v-for="(driver, index) in results" :key="index">
-                    {{ driver.position }}
-                    {{ driver.Driver.givenName + ' ' + driver.Driver.familyName }}
-                    {{ driver.Constructor.name }}
-                    {{ driver.points }}
-                    {{ qTime(driver) }}
+                <div v-for="(driver, index) in results" :key="index" class="flex">
+                    <div>{{ driver.position }}</div>
+                    <div>{{ driver.Driver.givenName + ' ' + driver.Driver.familyName }}</div>
+                    <div>{{ driver.Constructor.name }}</div>
+                    <div>{{ driver.points }}</div>
+                    <div>{{ qTime(driver) }}</div>
                 </div>
             </div>
         </transition>

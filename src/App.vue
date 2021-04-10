@@ -1,7 +1,9 @@
 <template>
 <div class="antialiased text-gray-900 font-mono min-h-screen bg-white flex justify-center">
     <div class="w-full max-w-screen-md p-4 sm:p-8">
-        <Nav/>
+        <div class="mb-4">
+            <Nav/>
+        </div>
 
         <!-- content -->
         <router-view/>

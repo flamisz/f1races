@@ -1,30 +1,29 @@
 <template>
-    <div>
-        <div>Standings</div>
+    <div class="text-sm sm:text-base">
         <div v-if="loading">Loading...</div>
         <div v-if="error">{{ error }}</div>
 
         <div v-if="!loading && !results">No results yet...</div>
-        <transition name="fade">
-            <div v-if="results && driver" class="">
-                <div v-for="(driver, index) in results" :key="index">
-                    {{ driver.position }}
-                    {{ driver.Driver.givenName + ' ' + driver.Driver.familyName }}
-                    {{ driver.wins }}
-                    {{ driver.Constructors[0].name }}
-                    {{ driver.points }}
-                </div>
-            </div>
 
-            <div v-if="results && !driver" class="">
-                <div v-for="(driver, index) in results" :key="index">
-                    {{ driver.position }}
-                    {{ driver.Constructor.name }}
-                    {{ driver.wins }}
-                    {{ driver.points }}
-                </div>
+        <div v-if="results && driver">
+            <div v-for="(driver, index) in results" :key="index" class="flex items-baseline">
+                <div class="w-1/12">{{ driver.position }}</div>
+                <div class="w-6/12 truncate">{{ driver.Driver.givenName + ' ' + driver.Driver.familyName }}</div>
+                <div class="w-1/12">{{ driver.wins }}</div>
+                <div class="w-3/12 truncate text-xs sm:text-base text-gray-400">{{ driver.Constructors[0].name }}</div>
+                <div class="w-2/12">{{ driver.points }}</div>
             </div>
-        </transition>
+        </div>
+
+        <div v-if="results && !driver" class="">
+            <div v-for="(driver, index) in results" :key="index" class="flex items-baseline">
+                <div class="w-1/12">{{ driver.position }}</div>
+                <div class="w-6/12 truncate">{{ driver.Constructor.name }}</div>
+                <div class="w-1/12">{{ driver.wins }}</div>
+                <div class="w-2/12">{{ driver.points }}</div>
+                <div class="w-3/12">&nbsp;</div>
+            </div>
+        </div>
     </div>
 </template>
 
