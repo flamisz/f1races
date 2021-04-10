@@ -8,7 +8,7 @@
             {{ raceTime.date }} {{ raceTime.time }}
         </div>
 
-        <div>
+        <div v-if="race">
             <div class="flex">
                 <select v-model="tz" class="">
                     <option v-for="(option, index) in timezones" :value="option" :key="index">
@@ -94,6 +94,10 @@ export default {
 
     computed: {
         qualificationTime: function() {
+            if (!this.race) {
+                return { date: '', time: ''};
+            }
+
             let date = moment(this.race.times.qualification)
             return {
                 date: date.tz(this.tz).format('ddd DD MMM'),
@@ -102,6 +106,10 @@ export default {
         },
 
         raceTime: function() {
+            if (!this.race) {
+                return { date: '', time: ''};
+            }
+
             let date = moment(this.race.times.race)
             return {
                 date: date.tz(this.tz).format('ddd DD MMM'),
