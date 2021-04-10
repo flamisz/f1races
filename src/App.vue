@@ -1,6 +1,6 @@
 <template>
-<div class="antialiased text-gray-900 font-mono font-bold min-h-screen bg-white flex justify-center">
-    <div class="w-full max-w-screen-md p-8 m-4 bg-white border border-gray-300 overflow-hiddern rounded-lg shadow-lg">
+<div class="antialiased text-gray-900 font-mono min-h-screen bg-white flex justify-center">
+    <div class="w-full max-w-screen-md p-4 sm:p-8">
         <Nav/>
 
         <!-- content -->
