@@ -11,11 +11,11 @@
         </div>
 
         <div v-show="show === 'drivers'">
-            <Standings :driver="true" />
+            <Standings :driver="true" :show="show" />
         </div>
 
         <div v-show="show === 'constructor'">
-            <Standings :driver="false" />
+            <Standings :driver="false" :show="show" />
         </div>
     </div>
 </template>

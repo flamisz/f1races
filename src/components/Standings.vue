@@ -29,29 +29,48 @@
 
 <script>
 import { getDriver, getConstructor } from '@/api'
+import moment from 'moment-timezone'
 
 export default {
     name: 'Standings',
 
     props: {
-        driver: Boolean
+        driver: Boolean,
+        show: String,
     },
 
     data () {
         return {
             results: '',
             error: '',
-            loading: false
+            loading: false,
+            type: this.show,
         }
     },
 
     created () {
-        this.fetchData()
+        if (this.driver && localStorage.standingd) {
+            let timestamp = JSON.parse(localStorage.standingd).timestamp
+
+            if (moment().diff(timestamp, 'minutes') < 60) {
+                this.results = JSON.parse(localStorage.standingd).value
+            }
+        }
+
+        if (!this.driver && localStorage.standingc) {
+            let timestamp = JSON.parse(localStorage.standingc).timestamp
+
+            if (moment().diff(timestamp, 'minutes') < 60) {
+                this.results = JSON.parse(localStorage.standingc).value
+            }
+        }
     },
 
     watch: {
-        '$route' () {
-            this.fetchData()
+        show: function(val) {
+            if ((val === 'drivers' && this.driver) || (val === 'constructor' && !this.driver)) {
+                this.results || this.fetchData()
+            }
         }
     },
 
@@ -68,6 +87,8 @@ export default {
                         this.error = err.toString()
                     } else {
                         this.results = results
+                        let store = { value: results, timestamp: new Date().getTime() }
+                        localStorage.standingd = JSON.stringify(store);
                     }
                 })
             } else {
@@ -78,6 +99,8 @@ export default {
                         this.error = err.toString()
                     } else {
                         this.results = results
+                        let store = { value: results, timestamp: new Date().getTime() }
+                        localStorage.standingc = JSON.stringify(store);
                     }
                 })
             }
