@@ -9,7 +9,11 @@ module.exports = {
     fontFamily: {
       mono: ['Space Mono', 'mono-space'],
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        underline: 'inset 0 -5px 0 0 #D1D5DB',
+      }
+    },
   },
   variants: {
     extend: {},
