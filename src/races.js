@@ -8,8 +8,8 @@ const races = {
     tz: 'Asia/Bahrain',
     circuit_id: 'bahrain',
   },
-  italy: {
-    title: 'Italy',
+  imola: {
+    title: 'Imola',
     times: {
       qualification: '2021-04-17T13:00:00Z',
       race: '2021-04-18T13:00:00Z',
