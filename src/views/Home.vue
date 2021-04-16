@@ -1,9 +1,9 @@
 <template>
     <div>
         <div class="grid sm:grid-cols-3 sm:gap-4 py-2 mb-2 border-gray-400 border-t border-b border-dashed">
-            <div @click.prevent="show = 'cars'" class="font-bold cursor-pointer truncate text-sm sm:text-base"><span class="hover:shadow-underline" :class="{ 'shadow-underline': show === 'cars' }">cars</span></div>
-            <div @click.prevent="show = 'drivers'" class="font-bold cursor-pointer truncate text-sm sm:text-base"><span class="hover:shadow-underline" :class="{ 'shadow-underline': show === 'drivers' }">driver standings</span></div>
-            <div @click.prevent="show = 'constructor'" class="font-bold cursor-pointer truncate text-sm sm:text-base"><span class="hover:shadow-underline" :class="{ 'shadow-underline': show === 'constructor' }">constructor standings</span></div>
+            <div @click.prevent="show = 'cars'" class="font-bold cursor-pointer truncate text-sm sm:text-base px-1 rounded bg-gradient-to-r hover:from-yellow-50" :class="{ 'from-yellow-100': show === 'cars' }">cars</div>
+            <div @click.prevent="show = 'drivers'" class="font-bold cursor-pointer truncate text-sm sm:text-base px-1 rounded bg-gradient-to-r hover:from-yellow-50" :class="{ 'from-yellow-100': show === 'drivers' }">driver standings</div>
+            <div @click.prevent="show = 'constructor'" class="font-bold cursor-pointer truncate text-sm sm:text-base px-1 rounded bg-gradient-to-r hover:from-yellow-50" :class="{ 'from-yellow-100': show === 'constructor' }">constructor standings</div>
         </div>
 
         <div v-show="show === 'cars'">

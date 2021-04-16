@@ -30,18 +30,18 @@
             </div>
 
             <div class="flex justify-between mb-2">
-                <div @click.prevent="tz = race.tz" class="text-gray-400 text-sm cursor-pointer">
+                <div @click.prevent="tz = race.tz" class="text-yellow-400 font-bold text-sm cursor-pointer">
                     race timezone
                 </div>
 
-                <div @click.prevent="clear" class="text-gray-400 text-sm cursor-pointer">
+                <div @click.prevent="clear" class="text-yellow-400 font-bold text-sm cursor-pointer">
                     your timezone
                 </div>
             </div>
 
             <div class="grid sm:grid-cols-3 sm:gap-4 py-2 mb-2 border-gray-400 border-t border-b border-dashed">
-                <div @click.prevent="result = true; qualifying = false" class="font-bold cursor-pointer truncate text-sm sm:text-base hover:text-gray-400" :class="{ 'text-gray-400': result === true }">Race Result</div>
-                <div @click.prevent="qualifying = true; result = false" class="font-bold cursor-pointer truncate text-sm sm:text-base hover:text-gray-400" :class="{ 'text-gray-400': qualifying === true }">Qualifying Result</div>
+                <div @click.prevent="result = true; qualifying = false" class="font-bold cursor-pointer truncate text-sm sm:text-base bg-gradient-to-r px-0.5 rounded" :class="{ 'from-yellow-100': result === true }">show race result</div>
+                <div @click.prevent="qualifying = true; result = false" class="font-bold cursor-pointer truncate text-sm sm:text-base bg-gradient-to-r px-0.5 rounded" :class="{ 'from-yellow-100': qualifying === true }">show qualifying result</div>
             </div>
 
             <div v-show="qualifying">
