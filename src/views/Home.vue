@@ -1,9 +1,26 @@
 <template>
     <div>
-        <div class="grid sm:grid-cols-3 sm:gap-4 py-2 mb-2 border-gray-400 border-t border-b border-dashed">
-            <div @click.prevent="show = 'cars'" class="font-bold cursor-pointer truncate text-sm sm:text-base px-1 rounded bg-gradient-to-r hover:from-yellow-50" :class="{ 'from-yellow-100': show === 'cars' }">cars</div>
-            <div @click.prevent="show = 'drivers'" class="font-bold cursor-pointer truncate text-sm sm:text-base px-1 rounded bg-gradient-to-r hover:from-yellow-50" :class="{ 'from-yellow-100': show === 'drivers' }">driver standings</div>
-            <div @click.prevent="show = 'constructor'" class="font-bold cursor-pointer truncate text-sm sm:text-base px-1 rounded bg-gradient-to-r hover:from-yellow-50" :class="{ 'from-yellow-100': show === 'constructor' }">constructor standings</div>
+        <div class="mb-2 space-y-1 border-gray-400 border-t border-b border-dashed">
+            <div @click.prevent="show = 'cars'" class="flex w-min items-center cursor-pointer">
+                <div class="font-bold truncate text-sm sm:text-base px-1 rounded">cars</div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="sm:h-4 sm:w-4 h-3 w-3 text-yellow-100 bg-gray-400 rounded-full" :class="{ 'text-yellow-200': show === 'cars' }" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
+                </svg>
+            </div>
+
+            <div @click.prevent="show = 'drivers'" class="flex w-min items-center cursor-pointer">
+                <div class="font-bold truncate text-sm sm:text-base px-1 rounded">driver standings</div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="sm:h-4 sm:w-4 h-3 w-3 text-yellow-100 bg-gray-400 rounded-full" :class="{ 'text-yellow-200': show === 'drivers' }" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
+                </svg>
+            </div>
+
+            <div @click.prevent="show = 'constructor'" class="flex w-min items-center cursor-pointer">
+                <div class="font-bold cursor-pointer truncate text-sm sm:text-base px-1 rounded">constructor standings</div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="sm:h-4 sm:w-4 h-3 w-3 text-yellow-100 bg-gray-400 rounded-full" :class="{ 'text-yellow-200': show === 'constructor' }" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
+                </svg>
+            </div>
         </div>
 
         <div v-show="show === 'cars'">

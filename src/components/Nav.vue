@@ -1,7 +1,7 @@
 <template>
 <div>
     <div class="grid grid-cols-4 sm:grid-cols-5 gap-2 sm:gap-x-4">
-        <router-link v-for="(race, name) in races" :key="name" :to="'/race/' + name" active-class="bg-gradient-to-r from-yellow-100" class="px-0.5 rounded bg-gradient-to-r hover:from-yellow-50">
+        <router-link v-for="(race, name) in races" :key="name" :to="'/race/' + name" active-class="from-yellow-100" class="px-0.5 rounded bg-gradient-to-r hover:from-yellow-100">
             <div class="flex-row">
                 <div class="text-sm sm:text-base font-bold truncate">{{ name.replace('_', ' ') }}</div>
 
@@ -9,7 +9,7 @@
             </div>
         </router-link>
 
-        <router-link to="/" active-class="bg-gradient-to-r from-yellow-100" class="px-0.5 rounded bg-gradient-to-r hover:from-yellow-50" exact>
+        <router-link to="/" active-class="from-yellow-100" class="px-0.5 rounded bg-gradient-to-r hover:from-yellow-100" exact>
             <div class="flex-row">
                 <div class="text-sm sm:text-base font-bold truncate">home</div>
 
