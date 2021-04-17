@@ -30,12 +30,18 @@
             </div>
 
             <div class="flex justify-between mb-2">
-                <div @click.prevent="tz = race.tz" class="text-yellow-400 font-bold text-sm cursor-pointer">
-                    race timezone
+                <div @click.prevent="tz = race.tz" class="flex w-min items-center cursor-pointer">
+                    <div class="font-bold truncate text-sm sm:text-base px-1 rounded">race timezone</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="sm:h-4 sm:w-4 h-3 w-3 text-yellow-100 bg-gray-400 rounded-full" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
+                    </svg>
                 </div>
 
-                <div @click.prevent="clear" class="text-yellow-400 font-bold text-sm cursor-pointer">
-                    your timezone
+                <div @click.prevent="clear" class="flex w-min items-center cursor-pointer">
+                    <div class="font-bold truncate text-sm sm:text-base px-1 rounded">your timezone</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="sm:h-4 sm:w-4 h-3 w-3 text-yellow-100 bg-gray-400 rounded-full" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
+                    </svg>
                 </div>
             </div>
 
