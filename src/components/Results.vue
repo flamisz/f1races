@@ -21,13 +21,16 @@
 
 <script>
 import { getResults, getQualifying } from '@/api'
+import moment from 'moment-timezone'
 
 export default {
     name: 'Results',
 
     props: {
         circuit: String,
-        qualifying: Boolean
+        qualifying: Boolean,
+        show: Boolean,
+        time: String,
     },
 
     data () {
@@ -39,12 +42,22 @@ export default {
     },
 
     created () {
-        this.fetchData()
+        this.fetchResult()
     },
 
     watch: {
         '$route' () {
-            this.fetchData()
+            this.results = ''
+            this.error = ''
+            this.loading = false
+
+            this.fetchResult()
+        },
+
+        show: function(val) {
+            if (val) {
+                this.results || this.fetchData()
+            }
         }
     },
 
@@ -52,6 +65,12 @@ export default {
         fetchData () {
             this.error = this.results = null
             this.loading = true
+
+            if (moment().isBefore(this.time, 'day')) {
+                this.results = null
+                this.loading = false
+                return
+            }
 
             if (this.qualifying) {
                 getQualifying(this.circuit, (err, results) => {
@@ -61,6 +80,10 @@ export default {
                         this.error = err.toString()
                     } else {
                         this.results = results
+
+                        let store = { value: results, timestamp: new Date().getTime() }
+                        let key = this.circuit + 'resultq';
+                        localStorage.setItem(key, JSON.stringify(store));
                     }
                 })
             } else {
@@ -71,6 +94,10 @@ export default {
                         this.error = err.toString()
                     } else {
                         this.results = results
+
+                        let store = { value: results, timestamp: new Date().getTime() }
+                        let key = this.circuit + 'resultr';
+                        localStorage.setItem(key, JSON.stringify(store));
                     }
                 })
             }
@@ -91,6 +118,27 @@ export default {
 
             return '-'
         },
+
+        fetchResult () {
+            let storedQualifyingResult = localStorage.getItem(this.circuit + 'resultq');
+            let storedRaceResult = localStorage.getItem(this.circuit + 'resultr');
+
+            if (this.qualifying && storedQualifyingResult) {
+                let timestamp = JSON.parse(storedQualifyingResult).timestamp
+
+                if (moment().diff(timestamp, 'minutes') < 60) {
+                    this.results = JSON.parse(storedQualifyingResult).value
+                }
+            }
+
+            if (!this.qualifying && storedRaceResult) {
+                let timestamp = JSON.parse(storedRaceResult).timestamp
+
+                if (moment().diff(timestamp, 'minutes') < 60) {
+                    this.results = JSON.parse(storedRaceResult).value
+                }
+            }
+        }
     },
 }
 
