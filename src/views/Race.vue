@@ -22,7 +22,7 @@
 
         <div v-if="race">
             <div class="flex sm:w-1/2 mb-2">
-                <select v-model="tz" class="block w-full pl-3 pr-10 border-gray-300 focus:outline-none">
+                <select v-model="tz" class="block w-full pl-3 pr-10 border-gray-300 dark:border-transparent dark:bg-gray-600 focus:outline-none">
                     <option v-for="(option, index) in timezones" :value="option" :key="index">
                         {{ option }}
                     </option>
@@ -32,14 +32,14 @@
             <div class="flex justify-between mb-2">
                 <div @click.prevent="tz = race.tz" class="flex w-min items-center cursor-pointer">
                     <div class="font-bold truncate text-sm sm:text-base px-1 rounded">race timezone</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="sm:h-4 sm:w-4 h-3 w-3 text-yellow-100 bg-gray-400 rounded-full" viewBox="0 0 20 20" fill="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="sm:h-4 sm:w-4 h-3 w-3 text-yellow-100 dark:text-gray-900 bg-gray-400 rounded-full" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
                     </svg>
                 </div>
 
                 <div @click.prevent="clear" class="flex w-min items-center cursor-pointer">
                     <div class="font-bold truncate text-sm sm:text-base px-1 rounded">your timezone</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="sm:h-4 sm:w-4 h-3 w-3 text-yellow-100 bg-gray-400 rounded-full" viewBox="0 0 20 20" fill="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="sm:h-4 sm:w-4 h-3 w-3 text-yellow-100 dark:text-gray-900 bg-gray-400 rounded-full" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
                     </svg>
                 </div>
@@ -48,14 +48,14 @@
             <div class="mb-2 space-y-1 border-gray-400 border-t border-b border-dashed">
                 <div @click.prevent="result = true; qualifying = false" class="flex w-min items-center cursor-pointer">
                     <div class="font-bold truncate text-sm sm:text-base px-1 rounded">race result</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="sm:h-4 sm:w-4 h-3 w-3 text-yellow-100 bg-gray-400 rounded-full" :class="{ 'text-yellow-200': result === true }" viewBox="0 0 20 20" fill="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="sm:h-4 sm:w-4 h-3 w-3 bg-gray-400 rounded-full" :class="{ 'text-yellow-200 dark:text-gray-100': result === true, 'text-yellow-100 dark:text-gray-900': result === false }" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
                     </svg>
                 </div>
 
                 <div @click.prevent="qualifying = true; result = false" class="flex w-min items-center cursor-pointer">
                     <div class="font-bold truncate text-sm sm:text-base px-1 rounded">qualifying result</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="sm:h-4 sm:w-4 h-3 w-3 text-yellow-100 bg-gray-400 rounded-full" :class="{ 'text-yellow-200': qualifying === true }" viewBox="0 0 20 20" fill="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="sm:h-4 sm:w-4 h-3 w-3 bg-gray-400 rounded-full" :class="{ 'text-yellow-200 dark:text-gray-100': qualifying === true, 'text-yellow-100 dark:text-gray-900': qualifying === false }" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
                     </svg>
                 </div>
