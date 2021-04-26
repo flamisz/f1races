@@ -18,9 +18,9 @@
         </router-link>
 
         <div>
-            <button @click="switchTheme" type="button" class="bg-gray-200 dark:bg-gray-400 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" role="switch" aria-checked="false">
-                <span class="sr-only">Use setting</span>
-                <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
+            <button @click="switchTheme" type="button" class="bg-gray-200 dark:bg-gray-400 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none" role="switch" aria-checked="false">
+                <span class="sr-only">Dark mode</span>
+
                 <span :class="{ 'translate-x-5': dark, 'translate-x-0': !dark }" class="pointer-events-none relative inline-block h-5 w-5 rounded-full bg-white dark:bg-gray-900 shadow transform ring-0 transition ease-in-out duration-200">
                     <!-- Enabled: "opacity-0 ease-out duration-100", Not Enabled: "opacity-100 ease-in duration-200" -->
                     <span :class="{ 'opacity-0 ease-out duration-100': dark, 'opacity-100 ease-in duration-200': !dark }" class="absolute inset-0 h-full w-full flex items-center justify-center transition-opacity" aria-hidden="true">
@@ -29,7 +29,6 @@
                         </svg>
                     </span>
 
-                    <!-- Enabled: "opacity-100 ease-in duration-200", Not Enabled: "opacity-0 ease-out duration-100" -->
                     <span :class="{ 'opacity-100 ease-in duration-200': dark, 'opacity-0 ease-out duration-100': !dark }" class="absolute inset-0 h-full w-full flex items-center justify-center transition-opacity" aria-hidden="true">
                         <svg class="h-3 w-3 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
