@@ -17,10 +17,6 @@
                 <a href="https://twitter.com/flamisz" class="mr-2">tw: @flamisz</a>
                 <a href="https://github.com/flamisz">gh: @flamisz</a>
             </div>
-
-            <div>
-                <span @click="resetTheme" class="cursor-pointer">light/dark by OS</span>
-            </div>
         </div>
     </div>
 </div>
@@ -32,12 +28,6 @@ import Nav from '@/components/Nav.vue'
 export default {
     components: {
         Nav
-    },
-
-    methods: {
-        resetTheme() {
-            localStorage.removeItem('theme')
-        },
     }
 }
 </script>

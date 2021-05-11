@@ -4,7 +4,7 @@ module.exports = {
       './src/**/*.vue',
       './src/**/*.jsx',
     ],
-  darkMode: 'class', // or 'media' or 'class'
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
     fontFamily: {
       mono: ['Space Mono', 'mono-space'],
