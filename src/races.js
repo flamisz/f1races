@@ -53,25 +53,25 @@ const races = {
     tz: 'Asia/Baku',
     circuit_id: 'BAK',
   },
-  canada: {
-    title: 'Canada',
-    times: {
-      qualification: '2021-06-12T18:00:00Z',
-      race: '2021-06-13T18:00:00Z',
-    },
-    tz: 'America/Montreal',
-    circuit_id: 'villeneuve',
-  },
   france: {
     title: 'France',
     times: {
-      qualification: '2021-06-26T13:00:00Z',
-      race: '2021-06-27T13:00:00Z',
+      qualification: '2021-06-19T13:00:00Z',
+      race: '2021-06-20T13:00:00Z',
     },
     tz: 'Europe/Paris',
     circuit_id: 'ricard',
   },
   austria: {
+    title: 'Austria',
+    times: {
+      qualification: '2021-06-26T13:00:00Z',
+      race: '2021-06-27T13:00:00Z',
+    },
+    tz: 'Europe/Vienna',
+    circuit_id: 'red_bull_ring',
+  },
+  austria2: {
     title: 'Austria',
     times: {
       qualification: '2021-07-03T13:00:00Z',
