@@ -1,11 +1,11 @@
-export function getResults (circuit_id, results) {
+export function getResults (circuit_id, index, results) {
     fetch(`https://ergast.com/api/f1/2021/circuits/${circuit_id}/results.json`)
         .then(function(response) {
             return response.json();
         })
         .then(function(myJson) {
-            if (myJson && !! myJson.MRData.RaceTable.Races.length && !! myJson.MRData.RaceTable.Races[0]) {
-                results(null, myJson.MRData.RaceTable.Races[0].Results)
+            if (myJson && !! myJson.MRData.RaceTable.Races.length && !! myJson.MRData.RaceTable.Races[index]) {
+                results(null, myJson.MRData.RaceTable.Races[index].Results)
             } else {
                 results(null, null)
             }
@@ -13,14 +13,14 @@ export function getResults (circuit_id, results) {
         .catch(error => results(new Error(error)));
 }
 
-export function getQualifying (circuit_id, results) {
+export function getQualifying (circuit_id, index, results) {
     fetch(`https://ergast.com/api/f1/2021/circuits/${circuit_id}/qualifying.json`)
         .then(function(response) {
             return response.json();
         })
         .then(function(myJson) {
-            if (myJson && !! myJson.MRData.RaceTable.Races.length && !! myJson.MRData.RaceTable.Races[0]) {
-                results(null, myJson.MRData.RaceTable.Races[0].QualifyingResults)
+            if (myJson && !! myJson.MRData.RaceTable.Races.length && !! myJson.MRData.RaceTable.Races[index]) {
+                results(null, myJson.MRData.RaceTable.Races[index].QualifyingResults)
             } else {
                 results(null, null)
             }

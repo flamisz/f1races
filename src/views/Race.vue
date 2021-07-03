@@ -62,11 +62,11 @@
             </div>
 
             <div v-show="qualifying">
-                <Results :circuit="circuit" :qualifying="true" :show="qualifying" :time="race.times.qualification" />
+                <Results :circuit="circuit" :number="number" :qualifying="true" :show="qualifying" :time="race.times.qualification" />
             </div>
 
             <div v-show="result">
-                <Results :circuit="circuit" :qualifying="false" :show="result" :time="race.times.race" />
+                <Results :circuit="circuit" :number="number" :qualifying="false" :show="result" :time="race.times.race" />
             </div>
         </div>
     </div>
@@ -150,6 +150,10 @@ export default {
 
         circuit() {
             return this.race ? this.race.circuit_id : null
+        },
+
+        number() {
+            return this.race && this.race.number ? this.race.number : 0
         },
     },
 

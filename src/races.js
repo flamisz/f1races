@@ -79,6 +79,7 @@ const races = {
     },
     tz: 'Europe/Vienna',
     circuit_id: 'red_bull_ring',
+    number: 1,
   },
   great_britain: {
     title: 'Great Britain',

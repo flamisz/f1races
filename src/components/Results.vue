@@ -31,6 +31,7 @@ export default {
         qualifying: Boolean,
         show: Boolean,
         time: String,
+        number: Number,
     },
 
     data () {
@@ -73,7 +74,7 @@ export default {
             }
 
             if (this.qualifying) {
-                getQualifying(this.circuit, (err, results) => {
+                getQualifying(this.circuit, this.number, (err, results) => {
                     this.loading = false
 
                     if (err) {
@@ -82,12 +83,12 @@ export default {
                         this.results = results
 
                         let store = { value: results, timestamp: new Date().getTime() }
-                        let key = this.circuit + 'resultq';
+                        let key = this.circuit + this.number + 'resultq';
                         localStorage.setItem(key, JSON.stringify(store));
                     }
                 })
             } else {
-                getResults(this.circuit, (err, results) => {
+                getResults(this.circuit, this.number, (err, results) => {
                     this.loading = false
 
                     if (err) {
@@ -96,7 +97,7 @@ export default {
                         this.results = results
 
                         let store = { value: results, timestamp: new Date().getTime() }
-                        let key = this.circuit + 'resultr';
+                        let key = this.circuit + this.number + 'resultr';
                         localStorage.setItem(key, JSON.stringify(store));
                     }
                 })
@@ -120,8 +121,8 @@ export default {
         },
 
         fetchResult () {
-            let storedQualifyingResult = localStorage.getItem(this.circuit + 'resultq');
-            let storedRaceResult = localStorage.getItem(this.circuit + 'resultr');
+            let storedQualifyingResult = localStorage.getItem(this.circuit + this.number + 'resultq');
+            let storedRaceResult = localStorage.getItem(this.circuit + this.number + 'resultr');
 
             if (this.qualifying && storedQualifyingResult) {
                 let timestamp = JSON.parse(storedQualifyingResult).timestamp
