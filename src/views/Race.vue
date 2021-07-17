@@ -6,16 +6,22 @@
         <div v-if="race" class="mb-2 border-gray-400 border-t border-b border-dashed py-2">
             <div class="font-bold">{{ race.title }}</div>
             <div class="flex">
-                <div class="w-1/2">
+                <div :class="[sprintTime.time ? 'w-1/3' : 'w-1/2']">
                     <div class="text-gray-400 text-sm">race</div>
                     <div>{{ raceTime.date }}</div>
                     <div>{{ raceTime.time }}</div>
                 </div>
 
-                <div class="w-1/2">
+                <div :class="[sprintTime.time ? 'w-1/3' : 'w-1/2']">
                     <div class="text-gray-400 text-sm">qualifying</div>
                     <div>{{ qualificationTime.date }}</div>
                     <div>{{ qualificationTime.time }}</div>
+                </div>
+
+                <div :class="[sprintTime.time ? 'w-1/3' : 'w-1/2']" v-if="sprintTime.time">
+                    <div class="text-gray-400 text-sm">sprint</div>
+                    <div>{{ sprintTime.date }}</div>
+                    <div>{{ sprintTime.time }}</div>
                 </div>
             </div>
         </div>
@@ -142,6 +148,18 @@ export default {
             }
 
             let date = moment(this.race.times.race)
+            return {
+                date: date.tz(this.tz).format('ddd DD MMM').toLowerCase(),
+                time: date.tz(this.tz).format('h:mm A').toLowerCase()
+            }
+        },
+
+        sprintTime: function() {
+            if (!this.race || !this.race.times.sprint) {
+                return { date: '', time: ''};
+            }
+
+            let date = moment(this.race.times.sprint)
             return {
                 date: date.tz(this.tz).format('ddd DD MMM').toLowerCase(),
                 time: date.tz(this.tz).format('h:mm A').toLowerCase()

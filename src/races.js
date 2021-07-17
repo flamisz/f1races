@@ -84,8 +84,9 @@ const races = {
   great_britain: {
     title: 'Great Britain',
     times: {
-      qualification: '2021-07-17T14:00:00Z',
+      qualification: '2021-07-16T17:00:00Z',
       race: '2021-07-18T14:00:00Z',
+      sprint: '2021-07-17T15:30:00Z',
     },
     tz: 'Europe/London',
     circuit_id: 'silverstone',
