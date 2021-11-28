@@ -1,3 +1,6 @@
 autoCloseIssue: true
 openDraftPR: true
 branchName: '${issue.number}-${issue.title,}'
+copyIssueLabelsToPR: true
+copyIssueAssigneeToPR: true
+copyIssueProjectsToPR: true
