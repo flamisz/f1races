@@ -1,4 +1,4 @@
-autoCloseIssue: true
+autoCloseIssue: false
 openDraftPR: true
 branchName: '${issue.number}-${issue.title,}'
 copyIssueLabelsToPR: true
