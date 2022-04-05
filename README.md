@@ -1,6 +1,6 @@
 # f1races
 
-## just for a PR - again
+## just for a PR
 
 ## Project setup
 ```
